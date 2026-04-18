@@ -163,7 +163,7 @@ class AugmentComponent extends Component {
                     <tbody>
                     {this.namedInput('Energy cap', augstats.ecap, ['ecap'])}
                     {this.namedInput('Augment speed', augstats.augspeed, ['augspeed'])}
-                    {this.namedInput('Gold', augstats.gold, ['gold'])}
+                    {this.namedInput('黄金', augstats.gold, ['gold'])}
                     {this.namedInput('Net GPS', augstats.gps, ['gps'])}
                     {this.namedInput('Normal NAC:', augstats.nac, ['nac'])}
                     {this.namedInput('Normal LSC:', augstats.lsc, ['lsc'])}

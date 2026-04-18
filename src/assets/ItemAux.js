@@ -155,10 +155,10 @@ export const Stat = {
     TOUGHNESS: 'Toughness',
     MOVE_COOLDOWN: 'Move Cooldown',
     RESPAWN: 'Respawn',
-    DAYCARE_SPEED: 'Daycare Speed',
+    DAYCARE_SPEED: '日托速度',
     // Drop
-    GOLD_DROP: 'Gold Drops',
-    DROP_CHANCE: 'Drop Chance',
+    GOLD_DROP: '黄金掉落',
+    DROP_CHANCE: '掉率',
     QUEST_DROP: 'Quest Drops',
     // Ygg
     SEED_DROP: 'Seed Gain',
@@ -188,7 +188,7 @@ export const Stat = {
     // junk
     AP: 'AP',
     EXPERIENCE: 'Experience',
-    COOKING: 'Cooking'
+    COOKING: '烹饪'
 }
 
 let single_factors = {
@@ -218,11 +218,11 @@ let single_factors = {
         [Stat.RESPAWN]
     ],
     DAYCARE_SPEED: [
-        'Daycare',
+        '日托',
         [Stat.DAYCARE_SPEED]
     ],
     GOLD_DROP: [
-        'Gold Drops',
+        '黄金掉落',
         [Stat.GOLD_DROP]
     ],
     DROP_CHANCE: [
@@ -381,7 +381,7 @@ export const multiple_factors = {
         ]
     ],
     TIMEMACHINE: [
-        'Time Machine',
+        '时间机器',
         [
             Stat.ENERGY_CAP, Stat.ENERGY_POWER, Stat.MAGIC_CAP, Stat.MAGIC_POWER
         ],
@@ -423,7 +423,7 @@ export const multiple_factors = {
         ]
     ],
     AUGMENTATION: [
-        'Augmentation',
+        '挂件',
         [
             Stat.ENERGY_CAP, Stat.ENERGY_POWER, Stat.AUGMENT_SPEED
         ]
@@ -526,7 +526,7 @@ export const SetName = {
         'My Hearts <3', -3
     ],
     FOREST_PENDANT: [
-        'Forest Pendant', -2
+        '森林吊坠', -2
     ],
     LOOTY: [
         'Looty', -1
@@ -553,7 +553,7 @@ export const SetName = {
         'The Sky', 6
     ],
     HSB: [
-        'High Security Base', 7
+        '高度安全基地', 7
     ],
     GRB: [
         'Gordon Ramsay Bolton', 8
@@ -574,7 +574,7 @@ export const SetName = {
         'Jake from Accounting', 13
     ],
     GAUDY: [
-        'A Very Strange Place', 14
+        '奇怪的地方', 14
     ],
     MEGA: [
         'Mega Lands', 15
@@ -610,13 +610,13 @@ export const SetName = {
         'The Beast', 21, 4
     ],
     CHOCO: [
-        'Chocolate World', 22
+        '巧克力世界', 22
     ],
     EDGY: [
         'The Evilverse', 23
     ],
     PINK: [
-        'Pretty Pink Princess Land', 24
+        '粉红公主领', 24
     ],
     NERD: [
         'Greasy Nerd', 25, 1
@@ -747,7 +747,7 @@ export const Hacks = [
         7720
     ],
     [
-        'Adventure',
+        '冒险',
         2.00E+08,
         0.1000,
         1.0200,
@@ -755,7 +755,7 @@ export const Hacks = [
         7632
     ],
     [
-        'TM',
+        '时间机器',
         4.00E+08,
         0.2000,
         1.0200,
@@ -811,7 +811,7 @@ export const Hacks = [
         7164
     ],
     [
-        'Daycare',
+        '日托',
         2.00E+10,
         0.0200,
         1.0050,
@@ -819,7 +819,7 @@ export const Hacks = [
         7048
     ],
     [
-        'EXP',
+        '经验',
         4.00E+10,
         0.0250,
         1.0100,
@@ -887,7 +887,7 @@ export const Wishes = [
         'Inventory Space I', 4e15, 12
     ],
     [
-        'Mega Buff', 6e15, 1
+        '超究强化', 6e15, 1
     ],
     [
         'Energy Power I', 5e15, 10
@@ -1598,19 +1598,19 @@ export const NGUs = {
         ngu('Augments', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+22, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 4.00E-03, 1.00E+09, 0, 0.00E+00),
         ngu('Wandoos', 1.00E+13, 1.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+22, 1.00E-03, 1.00E+03, 177.9, 2.50E-01, 1.00E+33, 6.00E-04, 1.00E+03, 354.81, 1.50E-01),
         ngu('Respawn', 1.00E+13, 5.00E-04, 4.00E+02, 5, 2.00E-01, 1.00E+22, 5.00E-06, 1.00E+04, 20, 5.00E-02, 1.00E+33, 5.00E-06, 1.00E+04, 20, 5.00E-02),
-        ngu('Gold', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+23, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 5.00E-03, 1.00E+03, 31.63, 5.00E-01),
+        ngu('黄金', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+23, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 5.00E-03, 1.00E+03, 31.63, 5.00E-01),
         ngu('Adventure α', 1.00E+13, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+24, 5.00E-04, 1.00E+03, 177.9, 2.50E-01, 1.00E+34, 4.00E-04, 1.00E+03, 251.19, 2.00E-01),
         ngu('Power α', 1.00E+13, 5.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+25, 2.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+35, 1.60E-02, 1.00E+09, 0, 0.00E+00),
-        ngu('Drop Chance', 1.00E+15, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+26, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+36, 4.00E-04, 1.00E+03, 251.2, 2.00E-01),
+        ngu('掉率', 1.00E+15, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+26, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+36, 4.00E-04, 1.00E+03, 251.2, 2.00E-01),
         ngu('Magic NGU', 2.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+37, 4.00E-04, 1.00E+03, 501.19, 1.00E-01),
         ngu('PP', 5.00E+17, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.01E+28, 2.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+38, 1.60E-04, 1.00E+03, 501.21, 1.00E-01)
     ],
     magic: [
-        ngu('Yggdrasil', 2.00E+13, 1.00E-03, 4.00E+02, 55.4, 3.30E-01, 1.00E+22, 5.00E-04, 4.00E+02, 219.72, 1.00E-01, 1.00E+33, 4.00E-04, 4.00E+02, 247.69, 8.00E-02),
+        ngu('世界树', 2.00E+13, 1.00E-03, 4.00E+02, 55.4, 3.30E-01, 1.00E+22, 5.00E-04, 4.00E+02, 219.72, 1.00E-01, 1.00E+33, 4.00E-04, 4.00E+02, 247.69, 8.00E-02),
         ngu('Exp', 6.00E+13, 1.00E-04, 2.00E+03, 95.66, 4.00E-01, 1.00E+23, 5.00E-05, 2.00E+03, 437.35, 2.00E-01, 1.00E+33, 5.00E-05, 2.00E+03, 639.56, 1.50E-01),
         ngu('Power β', 2.00E+14, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+24, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+34, 5.00E-03, 1.00E+09, 0, 0.00E+00),
         ngu('Number', 6.00E+14, 1.00E-02, 1.00E+03, 31.7, 5.00E-01, 1.00E+25, 5.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+35, 5.00E-03, 1.00E+03, 251.2, 2.00E-01),
-        ngu('Time Machine', 5.00E+15, 2.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+26, 1.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+36, 1.00E-03, 1.00E+03, 3.981, 8.00E-01),
+        ngu('时间机器', 5.00E+15, 2.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+26, 1.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+36, 1.00E-03, 1.00E+03, 3.981, 8.00E-01),
         ngu('Energy NGU', 5.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+37, 5.00E-04, 1.00E+03, 354.82, 1.50E-01),
         ngu('Adventure β', 5.00E+17, 3.00E-04, 1.00E+03, 63.13, 4.00E-01, 1.01E+28, 1.50E-04, 1.00E+03, 177.83, 2.50E-01, 1.00E+38, 1.50E-04, 1.00E+03, 436.53, 1.20E-01)
     ]
