@@ -31,7 +31,7 @@ jobs:
         run: |
           npm run git-info
           npm run version
-          npm run react-app-rewired -- build
+          npx react-app-rewired build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
           CI: false
