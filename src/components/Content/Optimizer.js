@@ -122,10 +122,10 @@ class Optimizer extends Component {
                         <div className='button-section' key='slots'>
                             <ImportSaveForm/>
                             <button type="button" onClick={() => this.props.handleGo2Titan(8, 3, 5, 12)}>
-                                {'Titan 8 Preset'}
+                                {'泰坦 8 预设'}
                             </button>
                             <button type="button" onClick={() => this.props.handleGo2Titan(11, 6, 8, 15)}>
-                                {'Titan 11 Preset'}
+                                {'泰坦 11 预设'}
                             </button>
                             <ResetItemsButton/>
                             <br/>
