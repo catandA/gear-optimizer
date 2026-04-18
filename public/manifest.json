@@ -1,6 +1,6 @@
 {
-  "short_name": "Gear Optimizer",
-  "name": "Gear Optimizer for NGU Idle",
+  "short_name": "装备优化器",
+  "name": "NGU Idle 装备优化器",
   "icons": [
     {
       "src": "favicon-720.png",
