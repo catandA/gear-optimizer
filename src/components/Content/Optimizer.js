@@ -129,7 +129,7 @@ class Optimizer extends Component {
                             </button>
                             <ResetItemsButton/>
                             <br/>
-                            <div><Crement header='Highest zone' value={zone[0]} name='zone'
+                            <div><Crement header='最高冒险区域' value={zone[0]} name='zone'
                                           handleClick={this.props.handleCrement} min={2} max={maxzone}/></div>
                             {
                                 this.props.zone > 20

@@ -65,38 +65,38 @@ class AboutComponent extends Component {
         }
         return <div>
             <p className="center">
-                {'NGU Idle Gear Optimizer v' + GOVersion.version}
+                {'NGU Idle 装备优化器 v' + GOVersion.version}
                 <br/> {
-                'Latest version: ' + (
+                '最新版本：' + (
                     this.state.latest === null
-                        ? 'loading...'
+                        ? '加载中...'
                         : ('v' + this.state.latest))
             }
                 <br/> {
                 this.state.latest !== null && GOVersion.version !== this.state.latest
-                    ? 'Update by closing and reopening the optimizer once or twice.'
+                    ? '请关闭并重新打开优化器一到两次以更新。'
                     : ''
             }
-                <br/> {'Git hash: ' + GitCommit.logMessage.slice(0, 8)}
+                <br/> {'Git 哈希：' + GitCommit.logMessage.slice(0, 8)}
                 <br/>
                 <a href="https://github.com/gmiclotte/gear-optimizer/issues/new" rel="noopener noreferrer"
                    target="_blank">
-                    Report an issue.
+                    报告问题。
                 </a>
                 <br/>
-                <br/> {'Not affiliated with '}
+                <br/> {'与 '}
                 <a href="https://www.kongregate.com/games/somethingggg/ngu-idle" rel="noopener noreferrer"
                    target="_blank">
                     NGU Idle
-                </a>{'.'}
+                </a>{' 无关。'}
                 <br/>
-                <br/> {'All art copyright by '}
+                <br/> {'所有艺术版权归 '}
                 <a href="https://www.kongregate.com/accounts/somethingggg" rel="noopener noreferrer" target="_blank">
                     4G
-                </a>{'.'}
+                </a>{' 所有。'}
                 <br/>
                 <br/>
-                <button onClick={() => this.setState({open: true})}>{'Import/Export local storage'}</button>
+                <button onClick={() => this.setState({open: true})}>{'导入/导出本地存储'}</button>
             </p>
             <Modal className={'port-modal' + (this.context ? ' dark-mode' : '')} overlayClassName='port-overlay'
                    isOpen={this.state.open}

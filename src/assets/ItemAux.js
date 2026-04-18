@@ -153,15 +153,15 @@ export const Stat = {
     // adventure
     POWER: '力量',
     TOUGHNESS: '韧性',
-    MOVE_COOLDOWN: 'Move Cooldown',
-    RESPAWN: '重生',
+    MOVE_COOLDOWN: '技能冷却时间',
+    RESPAWN: '敌人生成时间',
     DAYCARE_SPEED: '日托速度',
     // Drop
     GOLD_DROP: '黄金掉落',
     DROP_CHANCE: '掉率',
     QUEST_DROP: '任务掉落',
     // Ygg
-    SEED_DROP: '种子获取',
+    SEED_DROP: '种子获取数量',
     YGGDRASIL_YIELD: '世界树产量',
     // E
     ENERGY_BARS: '能量条',
@@ -202,7 +202,7 @@ let single_factors = {
         '插入优先级', []
     ],
     POWER: [
-        'Power',
+        '力量',
         [Stat.POWER]
     ],
     TOUGHNESS: [
@@ -210,15 +210,15 @@ let single_factors = {
         [Stat.TOUGHNESS]
     ],
     MOVE_COOLDOWN: [
-        '移动冷却',
+        '技能冷却时间',
         [Stat.MOVE_COOLDOWN]
     ],
     RESPAWN: [
-        '重生',
+        '敌人生成时间',
         [Stat.RESPAWN]
     ],
     DAYCARE_SPEED: [
-        '日托',
+        '日托速度',
         [Stat.DAYCARE_SPEED]
     ],
     GOLD_DROP: [
