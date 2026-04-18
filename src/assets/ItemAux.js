@@ -151,70 +151,70 @@ export const Slot = {
 
 export const Stat = {
     // adventure
-    POWER: 'Power',
-    TOUGHNESS: 'Toughness',
+    POWER: '力量',
+    TOUGHNESS: '韧性',
     MOVE_COOLDOWN: 'Move Cooldown',
-    RESPAWN: 'Respawn',
+    RESPAWN: '重生',
     DAYCARE_SPEED: '日托速度',
     // Drop
     GOLD_DROP: '黄金掉落',
     DROP_CHANCE: '掉率',
-    QUEST_DROP: 'Quest Drops',
+    QUEST_DROP: '任务掉落',
     // Ygg
-    SEED_DROP: 'Seed Gain',
-    YGGDRASIL_YIELD: 'Yggdrasil Yield',
+    SEED_DROP: '种子获取',
+    YGGDRASIL_YIELD: '世界树产量',
     // E
-    ENERGY_BARS: 'Energy Bars',
-    ENERGY_CAP: 'Energy Cap',
-    ENERGY_POWER: 'Energy Power',
-    ENERGY_SPEED: 'Energy Speed',
+    ENERGY_BARS: '能量条',
+    ENERGY_CAP: '能量上限',
+    ENERGY_POWER: '能量强度',
+    ENERGY_SPEED: '能量速度',
     // M
-    MAGIC_BARS: 'Magic Bars',
-    MAGIC_CAP: 'Magic Cap',
-    MAGIC_POWER: 'Magic Power',
-    MAGIC_SPEED: 'Magic Speed',
+    MAGIC_BARS: '魔力条',
+    MAGIC_CAP: '魔力上限',
+    MAGIC_POWER: '魔力强度',
+    MAGIC_SPEED: '魔力速度',
     // R
-    RES3_BARS: 'Resource 3 Bars',
-    RES3_CAP: 'Resource 3 Cap',
-    RES3_POWER: 'Resource 3 Power',
+    RES3_BARS: '资源3条',
+    RES3_CAP: '资源3上限',
+    RES3_POWER: '资源3强度',
     // raw speed
-    AT_SPEED: 'Raw AT Speed',
-    AUGMENT_SPEED: 'Raw Augment Speed',
-    BEARD_SPEED: 'Raw Beard Speed',
-    HACK_SPEED: 'Raw Hack Speed',
-    NGU_SPEED: 'Raw NGU Speed',
-    WANDOOS_SPEED: 'Raw Wandoos Speed',
-    WISH_SPEED: 'Raw Wish Speed',
+    AT_SPEED: '原始高级训练速度',
+    AUGMENT_SPEED: '原始挂件速度',
+    BEARD_SPEED: '原始胡子速度',
+    HACK_SPEED: '原始黑客速度',
+    NGU_SPEED: '原始NGU速度',
+    WANDOOS_SPEED: '原始Wandoos速度',
+    WISH_SPEED: '原始许愿速度',
     // junk
-    AP: 'AP',
-    EXPERIENCE: 'Experience',
+    AP: '任意点',
+    EXPERIENCE: '经验',
     COOKING: '烹饪'
 }
 
 let single_factors = {
     NONE: [
-        'None', []
+        '无', []
     ],
     DELETE: [
-        'Delete priority', []
+        '删除优先级', []
     ],
     INSERT: [
-        'Insert priority', []
+        '插入优先级', []
     ],
     POWER: [
         'Power',
         [Stat.POWER]
     ],
     TOUGHNESS: [
-        'Toughness',
+        '韧性',
         [Stat.TOUGHNESS]
     ],
     MOVE_COOLDOWN: [
-        'Move Cooldown',
+        '移动冷却',
         [Stat.MOVE_COOLDOWN]
     ],
     RESPAWN: [
-        'Respawn',
+        '重生',
         [Stat.RESPAWN]
     ],
     DAYCARE_SPEED: [
@@ -226,11 +226,11 @@ let single_factors = {
         [Stat.GOLD_DROP]
     ],
     DROP_CHANCE: [
-        'Drop chance',
+        '掉率',
         [Stat.DROP_CHANCE]
     ],
     QUEST_DROP: [
-        'Quest Drop',
+        '任务掉落',
         [Stat.QUEST_DROP]
     ]
 }
@@ -248,13 +248,13 @@ Object.keys(Stat).forEach(key => {
 
 export const multiple_factors = {
     ENGU: [
-        'Energy NGU',
+        '能量NGU',
         [
             Stat.ENERGY_CAP, Stat.ENERGY_POWER, Stat.NGU_SPEED
         ]
     ],
     MNGU: [
-        'Magic NGU',
+        '魔力NGU',
         [
             Stat.MAGIC_CAP, Stat.MAGIC_POWER, Stat.NGU_SPEED
         ]
@@ -273,13 +273,13 @@ export const multiple_factors = {
         ]
     ],
     HACK: [
-        'Hacks',
+        '黑客',
         [
             Stat.RES3_CAP, Stat.RES3_POWER, Stat.HACK_SPEED
         ]
     ],
     WISHES: [
-        'Wishes',
+        '许愿',
         [
             Stat.ENERGY_CAP,
             Stat.ENERGY_POWER,
@@ -300,7 +300,7 @@ export const multiple_factors = {
         ]
     ],
     NGUSHACK: [
-        'NGUs and Hacks',
+        'NGU和黑客',
         [
             Stat.ENERGY_CAP,
             Stat.ENERGY_POWER,
@@ -323,7 +323,7 @@ export const multiple_factors = {
         ]
     ],
     NGUWISH: [
-        'NGUs and Wishes',
+        'NGU和许愿',
         [
             Stat.ENERGY_CAP,
             Stat.ENERGY_POWER,
@@ -346,7 +346,7 @@ export const multiple_factors = {
         ]
     ],
     WISHHACK: [
-        'Wishes and Hacks',
+        '许愿和黑客',
         [
             Stat.ENERGY_CAP,
             Stat.ENERGY_POWER,
@@ -369,13 +369,13 @@ export const multiple_factors = {
         ]
     ],
     ETIMEMACHINE: [
-        'Energy Time Machine',
+        '能量时间机器',
         [
             Stat.ENERGY_CAP, Stat.ENERGY_POWER
         ]
     ],
     MTIMEMACHINE: [
-        'Magic Time Machine',
+        '魔力时间机器',
         [
             Stat.MAGIC_CAP, Stat.MAGIC_POWER
         ]
@@ -399,13 +399,13 @@ export const multiple_factors = {
         ]
     ],
     EWANDOOS: [
-        'Energy Wandoos',
+        '能量Wandoos',
         [
             Stat.ENERGY_CAP, Stat.WANDOOS_SPEED
         ]
     ],
     MWANDOOS: [
-        'Magic Wandoos',
+        '魔力Wandoos',
         [
             Stat.MAGIC_CAP, Stat.WANDOOS_SPEED
         ]
@@ -429,7 +429,7 @@ export const multiple_factors = {
         ]
     ],
     AT: [
-        'Advanced Training',
+        '高级训练',
         [
             Stat.ENERGY_POWER, Stat.ENERGY_CAP, Stat.AT_SPEED
         ],
@@ -440,7 +440,7 @@ export const multiple_factors = {
         ]
     ],
     EBEARD: [
-        'Energy Beards',
+        '能量胡子',
         [
             Stat.ENERGY_POWER, Stat.ENERGY_BARS, Stat.BEARD_SPEED
         ],
@@ -451,7 +451,7 @@ export const multiple_factors = {
         ]
     ],
     MBEARD: [
-        'Magic Beards',
+        '魔力胡子',
         [
             Stat.MAGIC_POWER, Stat.MAGIC_BARS, Stat.BEARD_SPEED
         ],
@@ -462,7 +462,7 @@ export const multiple_factors = {
         ]
     ],
     BEARD: [
-        'Beards',
+        '胡子',
         [
             Stat.ENERGY_POWER, Stat.ENERGY_BARS, Stat.MAGIC_POWER, Stat.MAGIC_BARS, Stat.BEARD_SPEED
         ],
@@ -475,7 +475,7 @@ export const multiple_factors = {
         ]
     ],
     ECAPSPEED: [
-        'Energy Cap Speed',
+        '能量上限速度',
         [
             Stat.ENERGY_CAP, Stat.ENERGY_BARS
         ],
@@ -484,7 +484,7 @@ export const multiple_factors = {
         ]
     ],
     MCAPSPEED: [
-        'Magic Cap Speed',
+        '魔力上限速度',
         [
             Stat.MAGIC_CAP, Stat.MAGIC_BARS
         ],
@@ -493,7 +493,7 @@ export const multiple_factors = {
         ]
     ],
     XCAPSPEED: [
-        'Resource 3 Cap Speed',
+        '资源3上限速度',
         [
             Stat.RES3_CAP, Stat.RES3_BARS
         ],
@@ -520,10 +520,10 @@ export const Factors = extend(extend(single_factors, multiple_factors), remainin
 
 export const SetName = {
     MISC: [
-        'Miscellaneous', -4
+        '杂项', -4
     ],
     HEART: [
-        'My Hearts <3', -3
+        '我的心 <3', -3
     ],
     FOREST_PENDANT: [
         '森林吊坠', -2
@@ -532,205 +532,205 @@ export const SetName = {
         'Looty', -1
     ],
     ITOPOD: [
-        'ITOPOD', 0
+        '无尽之怒塔', 0
     ],
     SAFE: [
-        'Safe Zone', 1
+        '安全区', 1
     ],
     TRAINING: [
-        'Tutorial Zone', 2
+        '教程区', 2
     ],
     SEWERS: [
-        'Sewers', 3
+        '下水道', 3
     ],
     FOREST: [
-        'Forest', 4
+        '森林', 4
     ],
     CAVE: [
-        'Cave of Many Things', 5
+        '万物洞穴', 5
     ],
     SKY: [
-        'The Sky', 6
+        '天空', 6
     ],
     HSB: [
         '高度安全基地', 7
     ],
     GRB: [
-        'Gordon Ramsay Bolton', 8
+        '戈登·拉姆齐·博尔顿', 8
     ],
     CLOCK: [
-        'Clock Dimension', 9
+        '时钟维度', 9
     ],
     GCT: [
-        'Grand Corrupted Tree', 10
+        '大腐化树', 10
     ],
     TWO_D: [
-        'The 2D Universe', 11
+        '二维宇宙', 11
     ],
     SPOOPY: [
-        'Ancient Battlefield', 12
+        '古战场', 12
     ],
     JAKE: [
-        'Jake from Accounting', 13
+        '会计部的杰克', 13
     ],
     GAUDY: [
         '奇怪的地方', 14
     ],
     MEGA: [
-        'Mega Lands', 15
+        ' Mega 大陆', 15
     ],
     UUG_RINGS: [
-        'UUG, The Unmentionable', 16
+        'UUG, 不可名状者', 16
     ],
     BEARDVERSE: [
-        'The Beardverse', 17
+        '胡子宇宙', 17
     ],
     WANDERER: [
-        'Walderp', 18
+        ' Walderp ', 18
     ],
     WANDERER2: [
-        'Walderp', 18
+        ' Walderp ', 18
     ],
     BADLY_DRAWN: [
-        'Badly Drawn World', 19
+        '画技糟糕的世界', 19
     ],
     STEALTH: [
-        'Boring-Ass Earth', 20
+        '无聊的地球', 20
     ],
     SLIMY: [
-        'The Beast', 21, 1
+        '野兽', 21, 1
     ],
     SLIMY2: [
-        'The Beast', 21, 2
+        '野兽', 21, 2
     ],
     SLIMY3: [
-        'The Beast', 21, 3
+        '野兽', 21, 3
     ],
     SLIMY4: [
-        'The Beast', 21, 4
+        '野兽', 21, 4
     ],
     CHOCO: [
         '巧克力世界', 22
     ],
     EDGY: [
-        'The Evilverse', 23
+        '邪恶宇宙', 23
     ],
     PINK: [
         '粉红公主领', 24
     ],
     NERD: [
-        'Greasy Nerd', 25, 1
+        '油腻书呆子', 25, 1
     ],
     NERD2: [
-        'Greasy Nerd', 25, 2
+        '油腻书呆子', 25, 2
     ],
     NERD3: [
-        'Greasy Nerd', 25, 3
+        '油腻书呆子', 25, 3
     ],
     NERD4: [
-        'Greasy Nerd', 25, 4
+        '油腻书呆子', 25, 4
     ],
     META: [
-        'Meta Land', 26
+        '元大陆', 26
     ],
     PARTY: [
-        'Interdimensional Party', 27
+        '跨维度派对', 27
     ],
     MOBSTER: [
-        'The Godmother', 28, 1
+        '教母', 28, 1
     ],
     MOBSTER2: [
-        'The Godmother', 28, 2
+        '教母', 28, 2
     ],
     MOBSTER3: [
-        'The Godmother', 28, 3
+        '教母', 28, 3
     ],
     MOBSTER4: [
-        'The Godmother', 28, 4
+        '教母', 28, 4
     ],
     TYPO: [
-        'Typo Zonw', 29
+        '打字错误区域', 29
     ],
     FAD: [
-        'The Fad-lands', 30
+        '潮流之地', 30
     ],
     JRPG: [
-        'JRPGVille', 31
+        'JRPG小镇', 31
     ],
     EXILE: [
-        'The Exile', 32, 1
+        '流放者', 32, 1
     ],
     EXILE2: [
-        'The Exile', 32, 2
+        '流放者', 32, 2
     ],
     EXILE3: [
-        'The Exile', 32, 3
+        '流放者', 32, 3
     ],
     EXILE4: [
-        'The Exile', 32, 4
+        '流放者', 32, 4
     ],
     RADLANDS: [
-        'The Rad Lands', 33
+        '辐射之地', 33
     ],
     BACKTOSCHOOL: [
-        'Back To School', 34
+        '重返校园', 34
     ],
     WESTWORLD: [
-        'The West World', 35
+        '西部世界', 35
     ],
     ITHUNGERS: [
-        'It Hungers', 36, 1
+        '饥饿之物', 36, 1
     ],
     ITHUNGERS2: [
-        'It Hungers', 36, 2
+        '饥饿之物', 36, 2
     ],
     ITHUNGERS3: [
-        'It Hungers', 36, 3
+        '饥饿之物', 36, 3
     ],
     ITHUNGERS4: [
-        'It Hungers', 36, 4
+        '饥饿之物', 36, 4
     ],
     BREADVERSE: [
-        'The Breadverse', 37
+        '面包宇宙', 37
     ],
     SEVENTIES: [
-        'That 70\'s Zone', 38
+        '70年代区域', 38
     ],
     HALLOWEEN: [
-        'The Halloweenies', 39
+        '万圣节区', 39
     ],
     ROCKLOBSTER: [
-        'Rock Lobster', 40, 1
+        '摇滚龙虾', 40, 1
     ],
     ROCKLOBSTER2: [
-        'Rock Lobster', 40, 2
+        '摇滚龙虾', 40, 2
     ],
     ROCKLOBSTER3: [
-        'Rock Lobster', 40, 3
+        '摇滚龙虾', 40, 3
     ],
     ROCKLOBSTER4: [
-        'Rock Lobster', 40, 4
+        '摇滚龙虾', 40, 4
     ],
     CONSTRUCTION: [
-        'Construction Zone', 41
+        '建筑工地', 41
     ],
     DUCK: [
-        'DUCK DUCK ZONE', 42
+        '鸭子鸭子区域', 42
     ],
     NETHER: [
-        'The Nether Regions', 43
+        '地狱领域', 43
     ],
     AMALGAMATE: [
-        'Amalgamate', 44, 1
+        '融合怪', 44, 1
     ],
     AMALGAMATE2: [
-        'Amalgamate', 44, 2
+        '融合怪', 44, 2
     ],
     AMALGAMATE3: [
-        'Amalgamate', 44, 3
+        '融合怪', 44, 3
     ],
     AMALGAMATE4: [
-        'Amalgamate', 44, 4
+        '融合怪', 44, 4
     ],
     PIRATE: [
         'The Aethereal Sea Part 1', 45
@@ -739,7 +739,7 @@ export const SetName = {
 
 export const Hacks = [
     [
-        'Stats',
+        '属性',
         1.00E+08,
         2.5000,
         1.0250,
@@ -763,7 +763,7 @@ export const Hacks = [
         7544
     ],
     [
-        'Drop',
+        '掉率',
         4.00E+08,
         0.2500,
         1.0300,
@@ -771,7 +771,7 @@ export const Hacks = [
         7544
     ],
     [
-        'Augment',
+        '挂件',
         8.00E+08,
         0.2000,
         1.0100,
@@ -803,7 +803,7 @@ export const Hacks = [
         7252
     ],
     [
-        'QP',
+        '怪癖点',
         8.00E+09,
         0.0500,
         1.0080,
@@ -827,7 +827,7 @@ export const Hacks = [
         6960
     ],
     [
-        'Number',
+        '增数',
         8.00E+10,
         5.0000,
         1.0400,
@@ -835,7 +835,7 @@ export const Hacks = [
         6873
     ],
     [
-        'PP',
+        '特权点',
         2.00E+11,
         0.0500,
         1.0050,
@@ -843,7 +843,7 @@ export const Hacks = [
         6757
     ],
     [
-        'Hack',
+        '黑客',
         2.00E+11,
         0.0500,
         1.1000,
@@ -851,7 +851,7 @@ export const Hacks = [
         6757
     ],
     [
-        'Wish',
+        '许愿',
         1.00E+13,
         0.0100,
         1.0050,
@@ -866,98 +866,98 @@ export const Wishes = [
         'Kick-ass', 1e15, 1
     ],
     [
-        'Wish Speed I', 1e15, 10
+        '许愿速度 I', 1e15, 10
     ],
     [
-        'MacGuffin Drops', 2e15, 5
+        '麦高芬掉落', 2e15, 5
     ],
     [
-        'V2/3/4 Titan Rewards', 8e15, 3
+        'V2/3/4 泰坦奖励', 8e15, 3
     ],
     [
-        'Money Pit Sucks', 6e15, 1
+        '钱坑 sucks', 6e15, 1
     ],
     [
-        'Stats I', 3e15, 10
+        '属性 I', 3e15, 10
     ],
     [
-        'Adventure Stats I', 3e15, 10
+        '冒险属性 I', 3e15, 10
     ],
     [
-        'Inventory Space I', 4e15, 12
+        '背包空间 I', 4e15, 12
     ],
     [
         '超究强化', 6e15, 1
     ],
     [
-        'Energy Power I', 5e15, 10
+        '能量强度 I', 5e15, 10
     ],
     [
-        'Energy Cap I', 5e15, 10
+        '能量上限 I', 5e15, 10
     ],
     [
-        'Energy Bars I', 5e15, 10
+        '能量条 I', 5e15, 10
     ],
     [
-        'Magic Power I', 5e15, 10
+        '魔力强度 I', 5e15, 10
     ],
     [
-        'Magic Cap I', 5e15, 10
+        '魔力上限 I', 5e15, 10
     ],
     [
-        'Magic Bars I', 5e15, 10
+        '魔力条 I', 5e15, 10
     ],
     [
-        'Resource 3 Power I', 5e15, 10
+        '资源3强度 I', 5e15, 10
     ],
     [
-        'Resource 3 Cap I', 5e15, 10
+        '资源3上限 I', 5e15, 10
     ],
     [
-        'Resource 3 Bars I', 5e15, 10
+        '资源3条 I', 5e15, 10
     ],
     [
-        'Hack Speed I', 1e16, 10
+        '黑客速度 I', 1e16, 10
     ],
     [
-        'Active Quest Reward I', 2e16, 10
+        '活跃任务奖励 I', 2e16, 10
     ],
     [
-        'Minimal Rebirth Time', 3e16, 6
+        '最小重生时间', 3e16, 6
     ],
     //page 2
     [
-        'Wish Speed II', 5e16, 10
+        '许愿速度 II', 5e16, 10
     ],
     [
-        'Inventory space II', 8e16, 12
+        '背包空间 II', 8e16, 12
     ],
     [
-        'Faster Basic Training', 1e17, 1
+        '更快的基础训练', 1e17, 1
     ],
     [
-        'Blood MacGuffin α Target', 6e16, 1
+        '血麦高芬 α 目标', 6e16, 1
     ],
     [
-        'Fruit of MacGuffin α Target', 6e16, 1
+        '果麦高芬 α 目标', 6e16, 1
     ],
     [
         'Oscar Meyer Weiner', 1e18, 1
     ],
     [
-        'Daycare Kitty Happiness', 5e16, 10
+        '日托猫咪快乐度', 5e16, 10
     ],
     [
-        'Dual Wield I', 3e17, 10
+        '双持 I', 3e17, 10
     ],
     [
-        'Adventure Stats II', 2e17, 10
+        '冒险属性 II', 2e17, 10
     ],
     [
-        'Stats II', 2e17, 10
+        '属性 II', 2e17, 10
     ],
     [
-        'Energy Power II', 1e17, 10
+        '能量强度 II', 1e17, 10
     ],
     [
         'Energy Cap II', 1e17, 10
@@ -1595,23 +1595,23 @@ const ngu = (name, nc, nb, nsc, nscb, nsce, ec, eb, esc, escb, esce, sc, sb, ssc
 
 export const NGUs = {
     energy: [
-        ngu('Augments', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+22, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 4.00E-03, 1.00E+09, 0, 0.00E+00),
+        ngu('挂件', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+22, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 4.00E-03, 1.00E+09, 0, 0.00E+00),
         ngu('Wandoos', 1.00E+13, 1.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+22, 1.00E-03, 1.00E+03, 177.9, 2.50E-01, 1.00E+33, 6.00E-04, 1.00E+03, 354.81, 1.50E-01),
-        ngu('Respawn', 1.00E+13, 5.00E-04, 4.00E+02, 5, 2.00E-01, 1.00E+22, 5.00E-06, 1.00E+04, 20, 5.00E-02, 1.00E+33, 5.00E-06, 1.00E+04, 20, 5.00E-02),
+        ngu('生成时间', 1.00E+13, 5.00E-04, 4.00E+02, 5, 2.00E-01, 1.00E+22, 5.00E-06, 1.00E+04, 20, 5.00E-02, 1.00E+33, 5.00E-06, 1.00E+04, 20, 5.00E-02),
         ngu('黄金', 1.00E+13, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+23, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+33, 5.00E-03, 1.00E+03, 31.63, 5.00E-01),
-        ngu('Adventure α', 1.00E+13, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+24, 5.00E-04, 1.00E+03, 177.9, 2.50E-01, 1.00E+34, 4.00E-04, 1.00E+03, 251.19, 2.00E-01),
-        ngu('Power α', 1.00E+13, 5.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+25, 2.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+35, 1.60E-02, 1.00E+09, 0, 0.00E+00),
+        ngu('冒险α', 1.00E+13, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+24, 5.00E-04, 1.00E+03, 177.9, 2.50E-01, 1.00E+34, 4.00E-04, 1.00E+03, 251.19, 2.00E-01),
+        ngu('攻防α', 1.00E+13, 5.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+25, 2.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+35, 1.60E-02, 1.00E+09, 0, 0.00E+00),
         ngu('掉率', 1.00E+15, 1.00E-03, 1.00E+03, 31.7, 5.00E-01, 1.00E+26, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+36, 4.00E-04, 1.00E+03, 251.2, 2.00E-01),
-        ngu('Magic NGU', 2.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+37, 4.00E-04, 1.00E+03, 501.19, 1.00E-01),
-        ngu('PP', 5.00E+17, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.01E+28, 2.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+38, 1.60E-04, 1.00E+03, 501.21, 1.00E-01)
+        ngu('魔力NGU', 2.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.00E+37, 4.00E-04, 1.00E+03, 501.19, 1.00E-01),
+        ngu('特权点', 5.00E+17, 5.00E-04, 1.00E+03, 125.9, 3.00E-01, 1.01E+28, 2.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+38, 1.60E-04, 1.00E+03, 501.21, 1.00E-01)
     ],
     magic: [
         ngu('世界树', 2.00E+13, 1.00E-03, 4.00E+02, 55.4, 3.30E-01, 1.00E+22, 5.00E-04, 4.00E+02, 219.72, 1.00E-01, 1.00E+33, 4.00E-04, 4.00E+02, 247.69, 8.00E-02),
-        ngu('Exp', 6.00E+13, 1.00E-04, 2.00E+03, 95.66, 4.00E-01, 1.00E+23, 5.00E-05, 2.00E+03, 437.35, 2.00E-01, 1.00E+33, 5.00E-05, 2.00E+03, 639.56, 1.50E-01),
-        ngu('Power β', 2.00E+14, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+24, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+34, 5.00E-03, 1.00E+09, 0, 0.00E+00),
-        ngu('Number', 6.00E+14, 1.00E-02, 1.00E+03, 31.7, 5.00E-01, 1.00E+25, 5.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+35, 5.00E-03, 1.00E+03, 251.2, 2.00E-01),
+        ngu('经验', 6.00E+13, 1.00E-04, 2.00E+03, 95.66, 4.00E-01, 1.00E+23, 5.00E-05, 2.00E+03, 437.35, 2.00E-01, 1.00E+33, 5.00E-05, 2.00E+03, 639.56, 1.50E-01),
+        ngu('攻防β', 2.00E+14, 1.00E-02, 1.00E+09, 0, 0.00E+00, 1.00E+24, 5.00E-03, 1.00E+09, 0, 0.00E+00, 1.00E+34, 5.00E-03, 1.00E+09, 0, 0.00E+00),
+        ngu('增数', 6.00E+14, 1.00E-02, 1.00E+03, 31.7, 5.00E-01, 1.00E+25, 5.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+35, 5.00E-03, 1.00E+03, 251.2, 2.00E-01),
         ngu('时间机器', 5.00E+15, 2.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+26, 1.00E-03, 1.00E+03, 3.981, 8.00E-01, 1.00E+36, 1.00E-03, 1.00E+03, 3.981, 8.00E-01),
-        ngu('Energy NGU', 5.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+37, 5.00E-04, 1.00E+03, 354.82, 1.50E-01),
-        ngu('Adventure β', 5.00E+17, 3.00E-04, 1.00E+03, 63.13, 4.00E-01, 1.01E+28, 1.50E-04, 1.00E+03, 177.83, 2.50E-01, 1.00E+38, 1.50E-04, 1.00E+03, 436.53, 1.20E-01)
+        ngu('能量NGU', 5.00E+16, 1.00E-03, 1.00E+03, 125.9, 3.00E-01, 1.00E+27, 5.00E-04, 1.00E+03, 251.2, 2.00E-01, 1.00E+37, 5.00E-04, 1.00E+03, 354.82, 1.50E-01),
+        ngu('冒险β', 5.00E+17, 3.00E-04, 1.00E+03, 63.13, 4.00E-01, 1.01E+28, 1.50E-04, 1.00E+03, 177.83, 2.50E-01, 1.00E+38, 1.50E-04, 1.00E+03, 436.53, 1.20E-01)
     ]
 };
