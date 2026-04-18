@@ -289,7 +289,7 @@ const ImportSaveForm = (props) => {
                     data-place="bottom"
             >Import save from file
             </button>
-            <label>Disable unowned<input type="checkbox" checked={disableItems} onChange={() => {
+            <label>禁用未持有的物品<input type="checkbox" checked={disableItems} onChange={() => {
                 setDisableItems(!disableItems)
             }}/></label>
         </div>

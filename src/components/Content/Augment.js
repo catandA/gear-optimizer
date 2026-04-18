@@ -161,8 +161,8 @@ class AugmentComponent extends Component {
             <form onSubmit={this.handleSubmit}>
                 <table className='center'>
                     <tbody>
-                    {this.namedInput('Energy cap', augstats.ecap, ['ecap'])}
-                    {this.namedInput('Augment speed', augstats.augspeed, ['augspeed'])}
+                    {this.namedInput('能量上限', augstats.ecap, ['ecap'])}
+                    {this.namedInput('挂件速度', augstats.augspeed, ['augspeed'])}
                     {this.namedInput('黄金', augstats.gold, ['gold'])}
                     {this.namedInput('Net GPS', augstats.gps, ['gps'])}
                     {this.namedInput('Normal NAC:', augstats.nac, ['nac'])}

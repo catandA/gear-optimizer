@@ -91,7 +91,7 @@ class NGUComponent extends Component {
                 <table className='center'>
                     <tbody>
                     <tr>
-                        <td>{'Energy cap'}</td>
+                        <td>{'能量上限'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -101,7 +101,7 @@ class NGUComponent extends Component {
                                        onChange={(e) => this.handleChange(e, 'cap', -1, 0)}/>
                             </label>
                         </td>
-                        <td>{'Energy NGU speed'}</td>
+                        <td>{'能量NGU速度'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -113,7 +113,7 @@ class NGUComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Magic cap'}</td>
+                        <td>{'魔力上限'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -123,7 +123,7 @@ class NGUComponent extends Component {
                                        onChange={(e) => this.handleChange(e, 'cap', -1, 1)}/>
                             </label>
                         </td>
-                        <td>{'Magic NGU speed'}</td>
+                        <td>{'魔力NGU速度'}</td>
                         <td>
                             <label>
                                 <input style={{

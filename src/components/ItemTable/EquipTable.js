@@ -224,7 +224,7 @@ export default class EquipTable extends React.Component {
             this.render_equip(savedequip, 'Saved ', compare, buffer, this.props.handleEquipItem, this.props.handleCtrlClickItem, false);
         }
         buffer.push(<div className='item-section' key='stats'
-                         onClick={() => this.props.handleSettings('compactbonus', !this.props.compactbonus)}>{'Gear stats (change w.r.t. save slot)'}<br/><br/> {
+                         onClick={() => this.props.handleSettings('compactbonus', !this.props.compactbonus)}>{'装备加成(change w.r.t. save slot)'}<br/><br/> {
             Object.getOwnPropertyNames(Factors).map((factor) => (
                 (factor === 'NONE' || factor === 'DELETE' || factor === 'INSERT')
                     ? <div key={factor}/>

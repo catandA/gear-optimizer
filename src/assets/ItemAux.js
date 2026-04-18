@@ -178,13 +178,13 @@ export const Stat = {
     RES3_CAP: '资源3上限',
     RES3_POWER: '资源3强度',
     // raw speed
-    AT_SPEED: '原始高级训练速度',
-    AUGMENT_SPEED: '原始挂件速度',
-    BEARD_SPEED: '原始胡子速度',
-    HACK_SPEED: '原始黑客速度',
-    NGU_SPEED: '原始NGU速度',
-    WANDOOS_SPEED: '原始Wandoos速度',
-    WISH_SPEED: '原始许愿速度',
+    AT_SPEED: '高级训练速度',
+    AUGMENT_SPEED: '挂件速度',
+    BEARD_SPEED: '胡子速度',
+    HACK_SPEED: '黑客速度',
+    NGU_SPEED: 'NGU速度',
+    WANDOOS_SPEED: 'Wandoos速度',
+    WISH_SPEED: '许愿速度',
     // junk
     AP: '任意点',
     EXPERIENCE: '经验',
@@ -779,7 +779,7 @@ export const Hacks = [
         7456
     ],
     [
-        'ENGU',
+        '能量NGU',
         2.00E+09,
         0.1000,
         1.0150,
@@ -787,7 +787,7 @@ export const Hacks = [
         7340
     ],
     [
-        'MNGU',
+        '魔力NGU',
         2.00E+09,
         0.1000,
         1.0150,

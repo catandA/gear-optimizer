@@ -139,13 +139,13 @@ class Optimizer extends Component {
                                     </div>
                                     : ''
                             }
-                            <div><Crement header='Highest looty' value={looty} name='looty'
+                            <div><Crement header='最高战利品者' value={looty} name='looty'
                                           handleClick={this.props.handleCrement} min={-1} max={LOOTIES.length - 1}/>
                             </div>
-                            <div><Crement header='Highest pendant' value={pendant} name='pendant'
+                            <div><Crement header='最高森林吊坠' value={pendant} name='pendant'
                                           handleClick={this.props.handleCrement} min={-1} max={PENDANTS.length - 1}/>
                             </div>
-                            <div><Crement header='Accessory slots' value={accslots} name='accslots'
+                            <div><Crement header='饰品槽位' value={accslots} name='accslots'
                                           handleClick={this.props.handleCrement} min={0} max={100}/></div>
                             {
                                 this.props.zone > 27
