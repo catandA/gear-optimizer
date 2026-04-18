@@ -1,6 +1,5 @@
 import PrimitiveType from "./PrimitiveType";
 import Decimal from './Decimal.js';
-import {Buffer} from 'buffer';
 import BigInt from "core-js/features/bigint";
 
 const LOG_EVERY_READ = false;

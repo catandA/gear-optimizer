@@ -13,7 +13,7 @@ class SystemClassWithMembersRecord extends ClassSerializationRecord {
         if (!className.match(regex)) {
             return {};
         }
-        const [_, typeName, libraryId, library] = className.match(regex);
+        const [, typeName, libraryId, library] = className.match(regex);
         this.classInfo.name = typeName;
         this.libraryId = libraryId;
         return library;
