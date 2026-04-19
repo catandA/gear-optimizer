@@ -50,28 +50,28 @@ class SaveButtons extends Component {
             this.state.value = this.props.savedequip[this.props.savedidx].ignore;
         }
         const name = this.props.savedequip[this.props.savedidx].name === undefined
-            ? 'Slot with no name'
+            ? '未命名槽位'
             : this.props.savedequip[this.props.savedidx].name;
         return (<div className='item-section'>
             <div style={{
                 margin: '5px'
             }}>
-                <OptimizeButton text={'All Saves'} running={this.props.running} abort={this.props.handleTerminate}
+                <OptimizeButton text={'所有存档'} running={this.props.running} abort={this.props.handleTerminate}
                                 optimize={this.props.handleOptimizeSaves}/>{' '}
                 <button onClick={this.props.handleToggleUnused}>
                     {
                         this.props.showunused
-                            ? 'Unmark unused items'
-                            : 'Mark unused items'
+                            ? '取消标记未使用物品'
+                            : '标记未使用物品'
                     }</button>
                 {' '}
                 <button key={'export loadout button'}
-                        onClick={() => this.setState({open: true})}>{'Export loadout'}</button>
+                        onClick={() => this.setState({open: true})}>{'导出装备方案'}</button>
                 <Modal key={'export loadout modal'} className={'port-modal' + (this.context ? ' dark-mode' : '')}
                        overlayClassName='port-overlay'
                        isOpen={this.state.open} onAfterOpen={undefined}
                        onRequestClose={() => (this.setState({open: false}))} style={customStyles}
-                       contentLabel='Export loadout' autoFocus={false}>
+                       contentLabel='导出装备方案' autoFocus={false}>
                     <ExportForm {...this.props} loadoutURI={this.props.loadoutURI} saveURI={this.props.saveURI}
                                 closeExportModal={() => (this.setState({open: false}))}/>
                 </Modal>{' '}
@@ -82,30 +82,30 @@ class SaveButtons extends Component {
             }}>
                 {/* <Crement header={'Save slot'} value={this.props.savedidx} name='savedidx' handleClick={this.props.handleCrement} min={0} max={this.props.maxsavedidx}/> */}
                 <button onClick={this.props.handleSaveSlot}>
-                    {'Save'}
+                    {'保存'}
                 </button>
                 <button onClick={this.props.handleLoadSlot}>
-                    {'Load'}
+                    {'加载'}
                 </button>
                 <button onClick={() => {
-                    if (window.confirm('Are you sure you wish to delete this saved loadout?')) {
+                    if (window.confirm('确定要删除此保存的装备方案吗?')) {
                         this.props.handleDeleteSlot()
                     }
                 }}>
-                    {'Delete'}
+                    {'删除'}
                 </button>
                 <button onClick={this.props.handleToggleSaved}>
                     {
                         this.props.showsaved
-                            ? 'Hide'
-                            : 'Show'
+                            ? '隐藏'
+                            : '显示'
                     }
                 </button>
                 <button onClick={this.props.handleLoadFactors}>
                     {
                         this.props.savedequip[this.props.savedidx].factors === undefined
-                            ? 'No Priorities Saved...'
-                            : 'Load Priorities'
+                            ? '没有保存的优先级...'
+                            : '加载优先级'
                     }
                 </button>
             </div>
@@ -114,7 +114,7 @@ class SaveButtons extends Component {
                     width: '150px',
                     margin: '5px'
                 }} value={name} onFocus={this.handleFocus}
-                       onChange={(e) => this.props.handleSaveName(e.target.value)}/> {'Ignore used: '}
+                       onChange={(e) => this.props.handleSaveName(e.target.value)}/> {'忽略已使用: '}
                 <input type="checkbox" checked={this.state.value} onChange={(e) => this.handleIgnore(e)}/>
             </div>
         </div>);

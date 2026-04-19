@@ -39,16 +39,16 @@ export default class ResourcePriorityForm extends React.Component {
         const policy_names = ['save', 'speed up cheapest', 'speed up in order'];
         return (<div>
             <label key={this.props.rp_idx}>
-                {'Resource spending order: '}
+                {'资源消耗顺序: '}
                 <select value={this.state.rp_idx} onChange={e => this.handleChange(e, 'rp_idx')}>
                     {resource_priorities.map((prio, idx) => (<option value={idx}
                                                                      key={idx}>{resource_names[prio[0]] + '>' + resource_names[prio[1]] + '>' + resource_names[prio[2]]}</option>))}
                 </select>
             </label><br/>
             <label key={this.props.rp_idx}>
-                {'Spare resource policy: '}
+                {'剩余资源策略: '}
                 <select value={this.state.spare_policy} onChange={e => this.handleChange(e, 'spare_policy')}>
-                    {policy_names.map((policy, idx) => (<option value={idx} key={policy}>{policy}</option>))}
+                    {['保存', '加速最便宜的', '按顺序加速'].map((policy, idx) => (<option value={idx} key={policy}>{policy}</option>))}
                 </select>
             </label>
         </div>);

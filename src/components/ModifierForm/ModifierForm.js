@@ -39,7 +39,7 @@ export default class ModifierForm extends React.Component {
         return (<table className='center'>
             <tbody>
             <tr>
-                <td>{'Advanced modifiers'}</td>
+                <td>{'高级修改器'}</td>
                 <td>
                     <input type="checkbox" checked={this.props[name].modifiers}
                            onChange={(e) => this.props.handleSettings(name, {
@@ -52,12 +52,12 @@ export default class ModifierForm extends React.Component {
                 ? ''
                 : 'hide'}>
             <tr>
-                <td>Current loadout</td>
+                <td>当前装备方案</td>
                 <td><SaveForm {...this.props} loc={[name, 'currentLoadout']} saveIdx={this.props[name].currentLoadout}/>
                 </td>
             </tr>
             <tr>
-                <td>Dedicated loadout</td>
+                <td>专用装备方案</td>
                 <td><SaveForm {...this.props} loc={[name, 'dedicatedLoadout']}
                               saveIdx={this.props[name].dedicatedLoadout}/></td>
             </tr>
@@ -71,15 +71,15 @@ export default class ModifierForm extends React.Component {
                                    ...this.props[name],
                                    blueHeart: !this.props[name].blueHeart
                                })}/>
-                        Blue Heart Maxxed
+                        蓝心已满级
                     </label>
                 </td>
-                <td>{'Current'}</td>
-                <td>{'Dedicated'}</td>
+                <td>{'当前'}</td>
+                <td>{'专用'}</td>
             </tr>
-            <PotionLine {...this.props} plName={'Energy Potion'} plShort={'e'} plHide={this.props.e}/>
-            <PotionLine {...this.props} plName={'Magic Potion'} plShort={'m'} plHide={this.props.m}/>
-            <PotionLine {...this.props} plName={'R3 Potion'} plShort={'r'} plHide={this.props.r}/>
+            <PotionLine {...this.props} plName={'能量药水'} plShort={'e'} plHide={this.props.e}/>
+            <PotionLine {...this.props} plName={'魔力药水'} plShort={'m'} plHide={this.props.m}/>
+            <PotionLine {...this.props} plName={'资源3药水'} plShort={'r'} plHide={this.props.r}/>
             </tbody>
         </table>);
     }

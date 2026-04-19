@@ -6,6 +6,16 @@ import {allowed_zone, get_limits} from '../../util'
 
 import './ItemTable.css';
 
+function get_zone_key(zone) {
+    // HACK: place items from different titan versions in same bucket
+    // Only strip version suffix if zone name is long enough (more than 2 chars)
+    const name = zone[0];
+    if (name.length > 2) {
+        return name.substring(0, name.length - 2);
+    }
+    return name;
+}
+
 function compare_factory(key) {
     return function (prop) {
         return function (a, b) {
@@ -17,7 +27,7 @@ function compare_factory(key) {
             let result;
             if (a[key][1] !== b[key][1]) {
                 // HACK: place items from different titan versions in same bucket
-                if (a[key][0].substring(0, a[key][0].length - 2) === b[key][0].substring(0, b[key][0].length - 2)) {
+                if (get_zone_key(a[key]) === get_zone_key(b[key])) {
                     result = a.slot[1] - b.slot[1];
                 } else if (a[key][1] * b[key][1] < 0) {
                     result = a[key][1] - b[key][1];
@@ -37,7 +47,7 @@ function group(a, b, g) {
         return false;
     }
     // HACK: place items from different titan versions in same bucket
-    return a[g][0].substring(0, a[g][0].length - 2) !== b[g][0].substring(0, b[g][0].length - 2);
+    return get_zone_key(a[g]) !== get_zone_key(b[g]);
 }
 
 export default class ItemTable extends React.Component {
@@ -127,7 +137,7 @@ export default class ItemTable extends React.Component {
                 }
                 last = item;
             }
-            class_idx = this.create_section(buffer, this.props.compactitemlist ? {zone: Infinity} : last, class_idx, this.props.compactitemlist ? 'Items' : '');
+            class_idx = this.create_section(buffer, this.props.compactitemlist ? {zone: Infinity} : last, class_idx, this.props.compactitemlist ? '物品' : '');
         }
         return (<div className='item-table'>
             {buffer}

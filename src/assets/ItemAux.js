@@ -27,7 +27,16 @@ export function update_level(item, level) {
  * @return {string}
  */
 export function EmptySlotName(slotname) {
-    return 'Empty ' + slotname[0].toUpperCase() + slotname.substring(1) + ' Slot';
+    const slotNames = {
+        'weapon': '武器',
+        'head': '头部',
+        'armor': '护甲',
+        'pants': '裤子',
+        'boots': '靴子',
+        'accessory': '饰品',
+        'other': '其他'
+    };
+    return '空' + (slotNames[slotname] || slotname[0].toUpperCase() + slotname.substring(1)) + '槽位';
 }
 
 /**
@@ -529,7 +538,7 @@ export const SetName = {
         '森林吊坠', -2
     ],
     LOOTY: [
-        'Looty', -1
+        '战利品者', -1
     ],
     ITOPOD: [
         '无尽之怒塔', 0
@@ -538,7 +547,7 @@ export const SetName = {
         '安全区', 1
     ],
     TRAINING: [
-        '教程区', 2
+        '教程区域', 2
     ],
     SEWERS: [
         '下水道', 3
@@ -547,37 +556,37 @@ export const SetName = {
         '森林', 4
     ],
     CAVE: [
-        '万物洞穴', 5
+        '杂物洞穴', 5
     ],
     SKY: [
-        '天空', 6
+        '高空', 6
     ],
     HSB: [
         '高度安全基地', 7
     ],
     GRB: [
-        '戈登·拉姆齐·博尔顿', 8
+        '戈登·拉姆齐·波顿', 8
     ],
     CLOCK: [
-        '时钟维度', 9
+        '时之维度', 9
     ],
     GCT: [
         '大腐化树', 10
     ],
     TWO_D: [
-        '二维宇宙', 11
+        '二次元宇宙', 11
     ],
     SPOOPY: [
-        '古战场', 12
+        '远古战场', 12
     ],
     JAKE: [
-        '会计部的杰克', 13
+        '会计詹克', 13
     ],
     GAUDY: [
         '奇怪的地方', 14
     ],
     MEGA: [
-        ' Mega 大陆', 15
+        'Mega 大陆', 15
     ],
     UUG_RINGS: [
         'UUG, 不可名状者', 16
@@ -586,28 +595,28 @@ export const SetName = {
         '胡子宇宙', 17
     ],
     WANDERER: [
-        ' Walderp ', 18
+        '沃尔德', 18
     ],
     WANDERER2: [
-        ' Walderp ', 18
+        '沃尔德', 18
     ],
     BADLY_DRAWN: [
-        '画技糟糕的世界', 19
+        '涂鸦世界', 19
     ],
     STEALTH: [
-        '无聊的地球', 20
+        '无聊至极的地球', 20
     ],
     SLIMY: [
-        '野兽', 21, 1
+        '虫兽', 21, 1
     ],
     SLIMY2: [
-        '野兽', 21, 2
+        '虫兽', 21, 2
     ],
     SLIMY3: [
-        '野兽', 21, 3
+        '虫兽', 21, 3
     ],
     SLIMY4: [
-        '野兽', 21, 4
+        '虫兽', 21, 4
     ],
     CHOCO: [
         '巧克力世界', 22
@@ -619,19 +628,19 @@ export const SetName = {
         '粉红公主领', 24
     ],
     NERD: [
-        '油腻书呆子', 25, 1
+        '油腻的肥宅', 25, 1
     ],
     NERD2: [
-        '油腻书呆子', 25, 2
+        '油腻的肥宅', 25, 2
     ],
     NERD3: [
-        '油腻书呆子', 25, 3
+        '油腻的肥宅', 25, 3
     ],
     NERD4: [
-        '油腻书呆子', 25, 4
+        '油腻的肥宅', 25, 4
     ],
     META: [
-        '元大陆', 26
+        '机甲领土', 26
     ],
     PARTY: [
         '跨维度派对', 27
@@ -733,7 +742,7 @@ export const SetName = {
         '融合怪', 44, 4
     ],
     PIRATE: [
-        'The Aethereal Sea Part 1', 45
+        '以太之海 第1部分', 45
     ],
 }
 
@@ -863,7 +872,7 @@ export const Hacks = [
 export const Wishes = [
     //page 1
     [
-        'Kick-ass', 1e15, 1
+        '超酷', 1e15, 1
     ],
     [
         '许愿速度 I', 1e15, 10
@@ -875,7 +884,7 @@ export const Wishes = [
         'V2/3/4 泰坦奖励', 8e15, 3
     ],
     [
-        '钱坑 sucks', 6e15, 1
+        '钱坑很烂', 6e15, 1
     ],
     [
         '属性 I', 3e15, 10
@@ -960,349 +969,349 @@ export const Wishes = [
         '能量强度 II', 1e17, 10
     ],
     [
-        'Energy Cap II', 1e17, 10
+        '能量上限 II', 1e17, 10
     ],
     [
-        'Energy Bars II', 1e17, 10
+        '能量条 II', 1e17, 10
     ],
     [
-        'Magic Power II', 1e17, 10
+        '魔力强度 II', 1e17, 10
     ],
     [
-        'Magic Cap II', 1e17, 10
+        '魔力上限 II', 1e17, 10
     ],
     [
-        'Magic Bars II', 1e17, 10
+        '魔力条 II', 1e17, 10
     ],
     [
-        'Resource 3 Power II', 1e17, 10
+        '资源3强度 II', 1e17, 10
     ],
     [
-        'Resource 3 Cap II', 1e17, 10
+        '资源3上限 II', 1e17, 10
     ],
     [
-        'Resource 3 Bars II', 1e17, 10
+        '资源3条 II', 1e17, 10
     ],
     [
-        'Godmother QP', 1e19, 1
+        '教母怪癖点', 1e19, 1
     ],
     [
-        'Exile QP', 3e20, 1
+        '流放者怪癖点', 3e20, 1
     ],
     // page 3
     [
-        'Hack Speed II', 7e17, 10
+        '黑客速度 II', 7e17, 10
     ],
     [
-        'Wish Speed III', 2e18, 10
+        '许愿速度 III', 2e18, 10
     ],
     [
-        'Daycare Kitty Art', 3e19, 1
+        '日托猫咪艺术', 3e19, 1
     ],
     [
-        'Dual Wield II', 1e19, 10
+        '双持 II', 1e19, 10
     ],
     [
-        'Respawn Rate', 6e18, 10
+        '重生速度', 6e18, 10
     ],
     [
-        'More QP', 3e18, 10
+        '更多怪癖点', 3e18, 10
     ],
     [
-        'Energy Power III', 5e18, 10
+        '能量强度 III', 5e18, 10
     ],
     [
-        'Energy Cap III', 5e18, 10
+        '能量上限 III', 5e18, 10
     ],
     [
-        'Energy Bars III', 5e18, 10
+        '能量条 III', 5e18, 10
     ],
     [
-        'Magic Power III', 5e18, 10
+        '魔力强度 III', 5e18, 10
     ],
     [
-        'Magic Cap III', 5e18, 10
+        '魔力上限 III', 5e18, 10
     ],
     [
-        'Magic Bars III', 5e18, 10
+        '魔力条 III', 5e18, 10
     ],
     [
-        'Resource 3 Power III', 5e18, 10
+        '资源3强度 III', 5e18, 10
     ],
     [
-        'Resource 3 Cap III', 5e18, 10
+        '资源3上限 III', 5e18, 10
     ],
     [
-        'Resource 3 Bars III', 5e18, 10
+        '资源3条 III', 5e18, 10
     ],
     [
-        'Inventory space III', 8e19, 12
+        '背包空间 III', 8e19, 12
     ],
     [
-        'Oh Shit', 3e21, 1
+        '糟糕', 3e21, 1
     ],
     [
-        'Blood MacGuffin α Sucks', 4e20, 10
+        '血之麦高芬 α 很烂', 4e20, 10
     ],
     [
-        'Fruit of MacGuffin α Sucks', 4e20, 10
+        '果之麦高芬 α 很烂', 4e20, 10
     ],
     [
-        'Exp Bonus', 8e19, 10
+        '经验加成', 8e19, 10
     ],
     [
-        'Active Quests II', 8e20, 10
+        '活跃任务 II', 8e20, 10
     ],
     // page 4
     [
-        'Hack Speed III', 5e20, 10
+        '黑客速度 III', 5e20, 10
     ],
     [
-        'Energy Power IV', 3e20, 10
+        '能量强度 IV', 3e20, 10
     ],
     [
-        'Energy Cap IV', 3e20, 10
+        '能量上限 IV', 3e20, 10
     ],
     [
-        'Energy Bars IV', 3e20, 10
+        '能量条 IV', 3e20, 10
     ],
     [
-        'Magic Power IV', 3e20, 10
+        '魔力强度 IV', 3e20, 10
     ],
     [
-        'Magic Cap IV', 3e20, 10
+        '魔力上限 IV', 3e20, 10
     ],
     [
-        'Magic Bars IV', 3e20, 10
+        '魔力条 IV', 3e20, 10
     ],
     [
-        'Resource 3 Power IV', 3e20, 10
+        '资源3强度 IV', 3e20, 10
     ],
     [
-        'Resource 3 Cap IV', 3e20, 10
+        '资源3上限 IV', 3e20, 10
     ],
     [
-        'Resource 3 Bars IV', 3e20, 10
+        '资源3条 IV', 3e20, 10
     ],
     [
-        'Beast QP', 2e16, 1
+        '野兽怪癖点', 2e16, 1
     ],
     [
-        'Greasy Nerd QP', 5.00E+17, 1
+        '油腻的肥宅怪癖点', 5.00E+17, 1
     ],
     [
-        'Seek help.', 5.00E+21, 1
+        '寻求帮助', 5.00E+21, 1
     ],
     [
-        'QP Hack Milestone I', 2.00E+17, 5
+        '怪癖点黑客里程碑 I', 2.00E+17, 5
     ],
     [
-        'Number Hack Milestone I', 1.00E+19, 5
+        '数字黑客里程碑 I', 1.00E+19, 5
     ],
     [
-        'Hack Hack Milestone I', 6.00E+20, 10
+        '黑客黑客里程碑 I', 6.00E+20, 10
     ],
     [
-        'More Base PP', 2.00E+21, 10
+        '更多基础 PP', 2.00E+21, 10
     ],
     [
-        'Higher level quest drops I', 5.00E+17, 2
+        '更高等级任务掉落 I', 5.00E+17, 2
     ],
     [
-        'Higher level quest drops II', 1.00E+22, 2
+        '更高等级任务掉落 II', 1.00E+22, 2
     ],
     [
-        'Energy Power V', 5.00E+21, 10
+        '能量强度 V', 5.00E+21, 10
     ],
     [
-        'Energy Bars V', 5.00E+21, 10
+        '能量条 V', 5.00E+21, 10
     ],
     [
-        'Energy Cap V', 5.00E+21, 10
+        '能量上限 V', 5.00E+21, 10
     ],
     [
-        'Magic Power V', 5.00E+21, 10
+        '魔力强度 V', 5.00E+21, 10
     ],
     [
-        'Magic Bars V', 5.00E+21, 10
+        '魔力条 V', 5.00E+21, 10
     ],
     [
-        'Magic Cap V', 5.00E+21, 10
+        '魔力上限 V', 5.00E+21, 10
     ],
     [
-        'Resource 3 Power V', 5.00E+21, 10
+        '资源3强度 V', 5.00E+21, 10
     ],
     [
-        'Resource 3 Bars V', 5.00E+21, 10
+        '资源3条 V', 5.00E+21, 10
     ],
     [
-        'Resource 3 Cap V', 5.00E+21, 10
+        '资源3上限 V', 5.00E+21, 10
     ],
     [
-        'Energy Power VI', 1.00E+23, 10
+        '能量强度 VI', 1.00E+23, 10
     ],
     [
-        'Energy Bars VI', 1.00E+23, 10
+        '能量条 VI', 1.00E+23, 10
     ],
     [
-        'Energy Cap VI', 1.00E+23, 10
+        '能量上限 VI', 1.00E+23, 10
     ],
     [
-        'Magic Power VI', 1.00E+23, 10
+        '魔力强度 VI', 1.00E+23, 10
     ],
     [
-        'Magic Bars VI', 1.00E+23, 10
+        '魔力条 VI', 1.00E+23, 10
     ],
     [
-        'Magic Cap VI', 1.00E+23, 10
+        '魔力上限 VI', 1.00E+23, 10
     ],
     [
-        'Resource 3 Power VI', 1.00E+23, 10
+        '资源3强度 VI', 1.00E+23, 10
     ],
     [
-        'Resource 3 Bars VI', 1.00E+23, 10
+        '资源3条 VI', 1.00E+23, 10
     ],
     [
-        'Resource 3 Cap VI', 1.00E+23, 10
+        '资源3上限 VI', 1.00E+23, 10
     ],
     [
-        'Titan 10 QP', 5.00E+22, 1
+        '泰坦10怪癖点', 5.00E+22, 1
     ],
     [
-        'Major Quests Base QP', 1.00E+22, 10
+        '主要任务基础怪癖点', 1.00E+22, 10
     ],
     [
-        'Minor Quests Base QP', 1.80E+23, 2
+        '次要任务基础怪癖点', 1.80E+23, 2
     ],
     [
-        'Adventure Stats III', 1.00E+19, 10
+        '冒险属性 III', 1.00E+19, 10
     ],
     [
-        'Adventure Stats IV', 3.00E+21, 10
+        '冒险属性 IV', 3.00E+21, 10
     ],
     [
-        'Stats III', 2.00E+19, 10
+        '属性 III', 2.00E+19, 10
     ],
     [
-        'Stats IV', 1.00E+21, 10
+        '属性 IV', 1.00E+21, 10
     ],
     [
-        'Sadistic Boss Multiplier I', 2.00E+22, 10
+        '虐待狂Boss倍率 I', 2.00E+22, 10
     ],
     [
-        'Sadistic Boss Multiplier II', 5.00E+23, 10
+        '虐待狂Boss倍率 II', 5.00E+23, 10
     ],
     [
-        'Accessory Slot', 5.00E+24, 1
+        '饰品槽位', 5.00E+24, 1
     ],
     [
-        'Cube Boosting I', 4.00E+19, 20
+        '立方体强化 I', 4.00E+19, 20
     ],
     [
-        'ENGU speed I', 7.00E+20, 10
+        '能量NGU速度 I', 7.00E+20, 10
     ],
     [
-        'ENGU speed II', 2.00E+22, 10
+        '能量NGU速度 II', 2.00E+22, 10
     ],
     [
-        'MNGU speed I', 7.00E+20, 10
+        '魔力NGU速度 I', 7.00E+20, 10
     ],
     [
-        'MNGU speed II', 2.00E+22, 10
+        '魔力NGU速度 II', 2.00E+22, 10
     ],
 
     [
-        'Energy NGU Card I', 4.00E+19, 1
+        '能量NGU卡片 I', 4.00E+19, 1
     ],
     [
-        'Drop Chance Card I', 4.00E+19, 1
+        '掉率卡片 I', 4.00E+19, 1
     ],
     [
-        'Wandoos Card I', 2.00E+19, 1
+        'Wandoos卡片 I', 2.00E+19, 1
     ],
     [
-        'Adventure Stats Card I', 8.00E+19, 1
+        '冒险属性卡片 I', 8.00E+19, 1
     ],
     [
-        'Hacks Card I', 5.00E+19, 1
+        '黑客卡片 I', 5.00E+19, 1
     ],
     [
-        'Augment Card I', 6.00E+19, 1
+        '挂件卡片 I', 6.00E+19, 1
     ],
     [
-        'Gold Drop Card I', 8.00E+19, 1
+        '黄金掉落卡片 I', 8.00E+19, 1
     ],
     [
-        'PP Card I', 1.00E+20, 1
+        'PP卡片 I', 1.00E+20, 1
     ],
     [
-        'A / D Card I', 9.00E+19, 1
+        '攻防卡片 I', 9.00E+19, 1
     ],
     [
-        'Magic NGU Card I', 1.90E+20, 1
+        '魔力NGU卡片 I', 1.90E+20, 1
     ],
     [
-        'TM Speed Card I', 1.70E+20, 1
+        '时间机器速度卡片 I', 1.70E+20, 1
     ],
     [
-        'QP Card I', 2.20E+20, 1
+        'QP卡片 I', 2.20E+20, 1
     ],
     [
-        'Daycare Card I', 2.50E+20, 1
+        '日托卡片 I', 2.50E+20, 1
     ],
     [
-        'Energy NGU Card II', 1.20E+21, 1
+        '能量NGU卡片 II', 1.20E+21, 1
     ],
     [
-        'Drop Chance Card II', 1.20E+21, 1
+        '掉落率卡片 II', 1.20E+21, 1
     ],
     [
-        'Wandoos Card II', 1.00E+21, 1
+        'Wandoos卡片 II', 1.00E+21, 1
     ],
     [
-        'Adventure Stats Card II', 1.50E+21, 1
+        '冒险属性卡片 II', 1.50E+21, 1
     ],
     [
-        'Hacks Card II', 1.80E+21, 1
+        '黑客卡片 II', 1.80E+21, 1
     ],
     [
-        'Augment Card II', 1.80E+21, 1
+        '挂件卡片 II', 1.80E+21, 1
     ],
     [
-        'Gold Drop Card II', 2.00E+21, 1
+        '黄金掉落卡片 II', 2.00E+21, 1
     ],
     [
-        'PP Card II', 2.50E+21, 1
+        '特权点卡片 II', 2.50E+21, 1
     ],
     [
-        'A / D Card II', 2.00E+21, 1
+        '攻防卡片 II', 2.00E+21, 1
     ],
     [
-        'Magic NGU Card II', 3.00E+21, 1
+        '魔力NGU卡片 II', 3.00E+21, 1
     ],
     [
-        'TM Speed Card II', 2.50E+21, 1
+        '时间机器速度卡片 II', 2.50E+21, 1
     ],
     [
-        'QP Tier II', 4.00E+21, 1
+        '怪癖点Tier II', 4.00E+21, 1
     ],
     [
-        'Daycare Card II', 5.00E+21, 1
+        '日托卡片 II', 5.00E+21, 1
     ],
     [
-        'Energy NGU Card III', 2.00E+22, 1
+        '能量NGU卡片 III', 2.00E+22, 1
     ],
     [
-        'Drop Chance Card III', 1.80E+22, 1
+        '掉率卡片 III', 1.80E+22, 1
     ],
     [
-        'Wandoos Card III', 1.50E+22, 1
+        'Wandoos卡片 III', 1.50E+22, 1
     ],
     [
-        'Adventure Stats Card III', 5.00E+22, 1
+        '冒险属性卡片 III', 5.00E+22, 1
     ],
     [
-        'Hacks Card III', 4.00E+22, 1
+        '黑客卡片 III', 4.00E+22, 1
     ],
     [
         'Augment Card III', 6.00E+22, 1
@@ -1311,22 +1320,22 @@ export const Wishes = [
         'Gold Drop Card III', 7.50E+22, 1
     ],
     [
-        'PP Card III', 1.00E+23, 2
+        '特权点卡片 III', 1.00E+23, 2
     ],
     [
-        'A / D Card III', 8.00E+22, 1
+        '攻防卡片 III', 8.00E+22, 1
     ],
     [
-        'Magic NGU Card III', 1.30E+23, 1
+        '魔力NGU卡片 III', 1.30E+23, 1
     ],
     [
-        'TM Speed Card III', 1.20E+23, 1
+        '时间机器速度卡片 III', 1.20E+23, 1
     ],
     [
-        'QP Card III', 1.50E+23, 2
+        '怪癖点卡片 III', 1.50E+23, 2
     ],
     [
-        'Daycare Card III', 1.60E+23, 1
+        '日托卡片 III', 1.60E+23, 1
     ],
     [
         'Faster Mayo I', 5.00E+20, 10
@@ -1389,16 +1398,16 @@ export const Wishes = [
         'Better Tags V', 1.50E+25, 10
     ],
     [
-        'Energy NGU Card IV', 2.50E+23, 2
+        '能量NGU卡片 IV', 2.50E+23, 2
     ],
     [
-        'Drop Chance Card IV', 2.20E+23, 2
+        '掉率卡片 IV', 2.20E+23, 2
     ],
     [
-        'Wandoos Card IV', 2.00E+23, 2
+        'Wandoos卡片 IV', 2.00E+23, 2
     ],
     [
-        'Adventure Stats Card IV', 5.00E+23, 2
+        '冒险属性卡片 IV', 5.00E+23, 2
     ],
     [
         'Hacks Card IV', 4.00E+23, 2
@@ -1410,22 +1419,22 @@ export const Wishes = [
         'Gold Drop Card IV', 7.50E+23, 2
     ],
     [
-        'PP Card IV', 1.00E+24, 2
+        '特权点卡片 IV', 1.00E+24, 2
     ],
     [
-        'A / D Card IV', 8.00E+23, 2
+        '攻防卡片 IV', 8.00E+23, 2
     ],
     [
-        'Magic NGU Card IV', 1.30E+24, 2
+        '魔力NGU卡片 IV', 1.30E+24, 2
     ],
     [
-        'TM Speed Card IV', 1.20E+24, 2
+        '时间机器速度卡片 IV', 1.20E+24, 2
     ],
     [
-        'QP Card IV', 1.50E+24, 2
+        '怪癖点卡片 IV', 1.50E+24, 2
     ],
     [
-        'Daycare Card IV', 1.60E+24, 2
+        '日托卡片 IV', 1.60E+24, 2
     ],
     [
         'Titan 11 QP', 2.00E+25, 1
@@ -1437,7 +1446,7 @@ export const Wishes = [
         'Stats V', 1.00E+24, 20
     ],
     [
-        'F**king Done With AT', 1.00E+18, 1
+        '高级训练完成了', 1.00E+18, 1
     ],
     [
         'Stats VI', 2.00E+25, 20
@@ -1473,24 +1482,25 @@ export const Wishes = [
         'Resource 3 Cap VII', 2.00E+24, 10
     ],
     [
-        'Sneak Preview', 1.00E+24, 1
+        '先睹为快', 1.00E+24, 1
     ],
     [
-        'SHUT DOWN', 1.00E+27, 1
+        '关闭', 1.00E+27, 1
     ],
     [
         'Titan 12 QP', 3.00E+26, 1
     ],
     [
-        'Energy NGU Card V', 4.00E+25, 2
+        '能量NGU卡片 V', 4.00E+25, 2
     ],
     [
-        'Drop Chance Card V', 5.00E+25, 2
+        '掉率卡片 V', 5.00E+25, 2
     ],
     [
-        'Wandoos Card V', 4.00E+25, 2],
+        'Wandoos卡片 V', 4.00E+25, 2
+    ],
     [
-        'Adventure Stats Card V', 1.00E+26, 2
+        '冒险属性卡片 V', 1.00E+26, 2
     ],
     [
         'Hacks Card V', 8.00E+25, 2
@@ -1499,28 +1509,28 @@ export const Wishes = [
         'Augment Card V', 1.00E+26, 2
     ],
     [
-        'Gold Drop Card V', 1.30E+26, 2
+        '黄金掉落卡片 V', 1.30E+26, 2
     ],
     [
-        'PP Card V', 2.00E+26, 2
+        '特权点卡片 V', 2.00E+26, 2
     ],
     [
-        'A / D Card V', 2.50E+26, 2
+        '攻防卡片 V', 2.50E+26, 2
     ],
     [
-        'Magic NGU Card V', 2.00E+26, 2
+        '魔力NGU卡片 V', 2.00E+26, 2
     ],
     [
-        'TM Speed Card V', 3.00E+26, 2
+        '时间机器速度卡片 V', 3.00E+26, 2
     ],
     [
-        'QP Card V', 5.00E+26, 2
+        '怪癖点卡片 V', 5.00E+26, 2
     ],
     [
-        'Daycare Card V', 4.00E+26, 2
+        '日托卡片 V', 4.00E+26, 2
     ],
     [
-        'Adventure Stats VI', 5.00E+25, 20
+        '冒险属性卡片 VI', 5.00E+25, 20
     ],
     [
         'Stats VIII', 1.80E+26, 20

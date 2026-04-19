@@ -191,7 +191,7 @@ const AppLayout = props => {
                     fontWeight: 400
                 }
             }}
-                          message='This page wants to use local storage and a cookie to respectively keep track of your configuration and consent. Scroll or click to accept.'
+                          message='本页面希望使用本地存储和cookie来分别跟踪您的配置和同意。滚动或点击以接受。'
             />
             <DarkModeContext.Provider value={darkMode}>
                 <Router>

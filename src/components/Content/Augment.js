@@ -6,25 +6,25 @@ import VersionForm from '../VersionForm/VersionForm'
 
 const AUGS = [
     {
-        name: 'scissors',
+        name: '剪刀',
         boost: Math.pow(25, 0)
     }, {
-        name: 'milk',
+        name: '牛奶',
         boost: Math.pow(25, 1)
     }, {
-        name: 'cannon',
+        name: '加农炮',
         boost: Math.pow(25, 2)
     }, {
-        name: 'mounted',
+        name: '加特林',
         boost: Math.pow(25, 3)
     }, {
-        name: 'buster',
+        name: '能量飞弹',
         boost: Math.pow(25, 4)
     }, {
-        name: 'exo',
+        name: '外骨骼',
         boost: Math.pow(25, 5) * 1e2
     }, {
-        name: 'laser sword',
+        name: '激光剑',
         boost: Math.pow(25, 6) * 1e4
     }
 ]
@@ -164,29 +164,29 @@ class AugmentComponent extends Component {
                     {this.namedInput('能量上限', augstats.ecap, ['ecap'])}
                     {this.namedInput('挂件速度', augstats.augspeed, ['augspeed'])}
                     {this.namedInput('黄金', augstats.gold, ['gold'])}
-                    {this.namedInput('Net GPS', augstats.gps, ['gps'])}
-                    {this.namedInput('Normal NAC:', augstats.nac, ['nac'])}
-                    {this.namedInput('Normal LSC:', augstats.lsc, ['lsc'])}
-                    {this.namedInput('time', augstats.time, ['time'])}
+                    {this.namedInput('净每秒黄金', augstats.gps, ['gps'])}
+                    {this.namedInput('普通 NAC:', augstats.nac, ['nac'])}
+                    {this.namedInput('普通 LSC:', augstats.lsc, ['lsc'])}
+                    {this.namedInput('时间', augstats.time, ['time'])}
                     <tr>
                         <td>
-                            {'Game mode:'}
+                            {'游戏模式:'}
                         </td>
                         <td>
                             {<VersionForm {...this.props} handleChange={this.handleChange}/>}
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Ratio:'}</td>
+                        <td>{'比例:'}</td>
                         <td>
                             <button onClick={() => this.configureRatios('exponent')}>
-                                {'Exponent'}
+                                {'指数'}
                             </button>
                             <button onClick={() => this.configureRatios('cost')}>
-                                {'Cost'}
+                                {'成本'}
                             </button>
                             <button onClick={() => this.configureRatios('equal')}>
-                                {'Equal'}
+                                {'相等'}
                             </button>
                         </td>
                     </tr>
@@ -195,12 +195,12 @@ class AugmentComponent extends Component {
                 <table className='center'>
                     <tbody>
                     <tr>
-                        <th>Augment</th>
-                        <th>Ratio</th>
-                        <th>Augment<br/>Energy</th>
-                        <th>Upgrade<br/>Energy</th>
-                        <th>Augment<br/>Level</th>
-                        <th>Upgrade<br/>Level</th>
+                        <th>挂件</th>
+                        <th>比例</th>
+                        <th>挂件<br/>能量</th>
+                        <th>升级<br/>能量</th>
+                        <th>挂件<br/>等级</th>
+                        <th>升级<br/>等级</th>
                         <th>Boost</th>
                     </tr>
                     {

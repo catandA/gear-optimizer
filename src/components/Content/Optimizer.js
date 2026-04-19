@@ -111,10 +111,10 @@ class Optimizer extends Component {
         const accslots = this.props.equip.accessory.length;
         const looty = this.props.looty >= 0
             ? LOOTIES[this.props.looty]
-            : 'None';
+            : '无';
         const pendant = this.props.pendant >= 0
             ? PENDANTS[this.props.pendant]
-            : 'None';
+            : '无';
         return (
             <DndProvider backend={HTML5Backend}>
                 <div className={this.props.className}>
@@ -133,7 +133,7 @@ class Optimizer extends Component {
                                           handleClick={this.props.handleCrement} min={2} max={maxzone}/></div>
                             {
                                 this.props.zone > 20
-                                    ? <div><Crement header={maxtitan[0] + ' version'} value={this.props.titanversion}
+                                    ? <div><Crement header={maxtitan[0] + ' 版本'} value={this.props.titanversion}
                                                     name='titanversion' handleClick={this.props.handleCrement} min={1}
                                                     max={4}/>
                                     </div>
@@ -149,18 +149,18 @@ class Optimizer extends Component {
                                           handleClick={this.props.handleCrement} min={0} max={100}/></div>
                             {
                                 this.props.zone > 27
-                                    ? <div><Crement header='Offhand power' value={this.props.offhand * 5 + '%'}
+                                    ? <div><Crement header='副手强度' value={this.props.offhand * 5 + '%'}
                                                     name='offhand'
                                                     handleClick={this.props.handleCrement} min={0} max={20}/></div>
                                     : ''
                             }
                         </div>
                         <div className='button-section' key='factorforms'>
-                            <OptimizeButton text={'Gear'} running={this.props.running}
+                            <OptimizeButton text={'装备'} running={this.props.running}
                                             abort={this.props.handleTerminate}
                                             optimize={this.props.handleOptimizeGear}/>{' '}
                             <button onClick={this.props.handleUndo}>
-                                {'Load previous'}
+                                {'加载上一个'}
                             </button>
                             <div className='factor-forms-container'>
                                 {[...this.props.factors.keys()].map((idx) => (
@@ -174,14 +174,14 @@ class Optimizer extends Component {
                             <table className='center cubetable'>
                                 <tbody>
                                 <tr>
-                                    <td>Allow disabled items</td>
+                                    <td>允许已禁用物品</td>
                                     <td>
                                         <input type="checkbox" checked={this.props.ignoreDisabled}
                                                onChange={() => this.props.handleSettings('ignoreDisabled', !this.props.ignoreDisabled)}/>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>P/T input</td>
+                                    <td>力量/韧性输入</td>
                                     <td>
                                         <input type="checkbox" checked={this.props.basestats.modifiers}
                                                onChange={(e) => this.props.handleSettings('basestats', {
@@ -190,45 +190,45 @@ class Optimizer extends Component {
                                                })}/></td>
                                 </tr>
                                 {
-                                    ['power', 'toughness'].map((statname, idx) => (
+                                    [['power', '力量'], ['toughness', '韧性']].map((stat, idx) => (
                                         <tr className={this.props.basestats.modifiers
                                             ? ''
-                                            : 'hide'} key={statname}>
-                                            <td>{'Base ' + statname.charAt(0).toUpperCase() + statname.slice(1)}
+                                            : 'hide'} key={stat[0]}>
+                                            <td>{'基础' + stat[1]}
                                             </td>
                                             <td>
                                                 <label>
                                                     <input style={{
                                                         width: '9ch',
                                                         margin: '1ch'
-                                                    }} type="number" step="any" value={this.props.basestats[statname]}
+                                                    }} type="number" step="any" value={this.props.basestats[stat[0]]}
                                                            onFocus={this.handleFocus}
-                                                           onChange={(e) => this.handleChange(e, ['base', statname])}/>
+                                                           onChange={(e) => this.handleChange(e, ['base', stat[0]])}/>
                                                 </label>
                                             </td>
                                         </tr>))
                                 }
                                 {
-                                    ['power', 'toughness', 'tier'].map((statname, idx) => (
-                                        <tr className={this.props.basestats.modifiers || statname === 'tier'
+                                    [['power', '力量'], ['toughness', '韧性'], ['tier', '层级']].map((stat, idx) => (
+                                        <tr className={this.props.basestats.modifiers || stat[0] === 'tier'
                                             ? ''
-                                            : 'hide'} key={statname}>
-                                            <td>{'Cube ' + statname.charAt(0).toUpperCase() + statname.slice(1)}
+                                            : 'hide'} key={stat[0]}>
+                                            <td>{'立方体' + stat[1]}
                                             </td>
                                             <td>
                                                 <label>
                                                     <input style={{
                                                         width: '9ch',
                                                         margin: '1ch'
-                                                    }} type="number" step="any" value={this.props.cubestats[statname]}
+                                                    }} type="number" step="any" value={this.props.cubestats[stat[0]]}
                                                            onFocus={this.handleFocus}
-                                                           onChange={(e) => this.handleChange(e, ['cube', statname])}/>
+                                                           onChange={(e) => this.handleChange(e, ['cube', stat[0]])}/>
                                                 </label>
                                             </td>
                                         </tr>))
                                 }
                                 <tr>
-                                    <td>Hardcap input</td>
+                                    <td>硬上限输入</td>
                                     <td>
                                         <input type="checkbox" checked={this.props.capstats.modifiers}
                                                onChange={(e) => this.props.handleSettings('capstats', {
@@ -245,7 +245,7 @@ class Optimizer extends Component {
                                         return (<tr className={this.props.capstats.modifiers
                                             ? ''
                                             : 'hide'} key={statname}>
-                                            <td>{statname}
+                                            <td>{statname === 'NudeEnergyCap' ? '裸装能量上限' : statname === 'NudeMagicCap' ? '裸装魔力上限' : statname === 'NudeRes3Cap' ? '裸装资源3上限' : statname}
                                             </td>
                                             <td>
                                                 <label>
@@ -287,7 +287,7 @@ class Optimizer extends Component {
                     <Modal className={'edit-item-modal' + (this.context ? ' dark-mode' : '')}
                            overlayClassName='edit-item-overlay' isOpen={this.props.editItem[0]}
                            onAfterOpen={undefined} onRequestClose={this.closeEditModal} style={customStyles}
-                           contentLabel='Item Edit Modal' autoFocus={false}>
+                           contentLabel='物品编辑模态框' autoFocus={false}>
                         <ItemForm {...this.props} closeEditModal={this.closeEditModal}/>
                     </Modal>
                     <ReactTooltip multiline={true}/>

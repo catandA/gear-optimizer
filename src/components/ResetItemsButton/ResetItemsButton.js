@@ -16,7 +16,7 @@ const ResetItemsButton = () => {
     }
 
     return (
-        <button onClick={onClick}>Reset Item Data</button>
+        <button onClick={onClick}>重置物品数据</button>
     )
 }
 

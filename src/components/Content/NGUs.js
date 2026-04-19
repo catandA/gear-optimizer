@@ -135,7 +135,7 @@ class NGUComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'NGU time (minutes)'}</td>
+                        <td>{'NGU 时间 (分钟)'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -147,14 +147,14 @@ class NGUComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Evil -> Normal Quirk'}</td>
+                        <td>{'邪恶 -> 普通 怪癖'}</td>
                         <td>
                             <label>
                                 <input type="checkbox" checked={this.props.ngustats.quirk.e2n}
                                        onChange={(e) => this.handleChange(e, 'e2n')}/>
                             </label>
                         </td>
-                        <td>{'Sadistic -> Evil Quirk'}</td>
+                        <td>{'残虐 -> 邪恶 怪癖'}</td>
                         <td>
                             <label>
                                 <input type="checkbox" checked={this.props.ngustats.quirk.s2e}
@@ -169,13 +169,13 @@ class NGUComponent extends Component {
                     <tbody>
                     <tr>
                         <th></th>
-                        <th>Normal Level</th>
-                        <th>Evil Level</th>
-                        <th>Sadistic Level</th>
-                        <th>Current<br/>Bonus</th>
-                        <th>Reachable<br/>Normal Level<br/>(Bonus Change)</th>
-                        <th>Reachable<br/>Evil Level<br/>(Bonus Change)</th>
-                        <th>Reachable<br/>Sadistic Level<br/>(Bonus Change)</th>
+                        <th>普通等级</th>
+                        <th>邪恶等级</th>
+                        <th>残虐等级</th>
+                        <th>当前<br/>加成</th>
+                        <th>可达<br/>普通等级<br/>(加成变化)</th>
+                        <th>可达<br/>邪恶等级<br/>(加成变化)</th>
+                        <th>可达<br/>残虐等级<br/>(加成变化)</th>
                     </tr>
                     {
                         ['energy', '', 'magic'].map((resource, resourceIdx) => {

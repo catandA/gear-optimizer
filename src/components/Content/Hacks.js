@@ -155,7 +155,7 @@ class HackComponent extends Component {
                 <table className='center'>
                     <tbody>
                     <tr>
-                        <td>{'R power'}</td>
+                        <td>{'资源3强度'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -167,7 +167,7 @@ class HackComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'R cap'}</td>
+                        <td>{'资源3上限'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -179,7 +179,7 @@ class HackComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Hack speed'}</td>
+                        <td>{'黑客速度'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -194,11 +194,11 @@ class HackComponent extends Component {
                                    onChange={(e) => this.props.handleSettings('hackstats', {
                                        ...this.props.hackstats,
                                        lockSpeed: !this.props.hackstats.lockSpeed
-                                   })}/>{'lock'}
+                                   })}/>{'锁定'}
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Hack time (minutes)'}</td>
+                        <td>{'黑客时间 (分钟)'}</td>
                         <td>
                             <label>
                                 <input style={{
@@ -210,7 +210,7 @@ class HackComponent extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td>{'Hack Optimizer Mode'}</td>
+                        <td>{'黑客优化器模式'}</td>
                         <td>
                             <label key='hackoption'>
                                 <select value={this.state.hackoption}
@@ -218,8 +218,8 @@ class HackComponent extends Component {
                                     {
                                         options.map((option, idx) => (<option value={idx} key={idx}>{
                                             [
-                                                'level target.', 'max level in ' + toTime(hacktime * 60 * 50),
-                                                'max MS in ' + toTime(hacktime * 60 * 50)
+                                                '等级目标', toTime(hacktime * 60 * 50) + '内的最大等级',
+                                                toTime(hacktime * 60 * 50) + '内的最大里程碑'
                                             ][idx]
                                         }</option>))
                                     }
@@ -233,22 +233,22 @@ class HackComponent extends Component {
                 <table className='center'>
                     <tbody>
                     <tr>
-                        <th>Hack</th>
-                        <th>Milestone<br/>Reducers</th>
-                        <th>Level</th>
-                        <th>Bonus</th>
-                        <th className={classTarget}>Target</th>
-                        <th className={classLevel}>Max Level<br/>in {hacktime}min</th>
-                        <th className={classMS}>Max MS<br/>in {hacktime}min</th>
+                        <th>黑客</th>
+                        <th>里程碑<br/>减少器</th>
+                        <th>等级</th>
+                        <th>加成</th>
+                        <th className={classTarget}>目标</th>
+                        <th className={classLevel}>{hacktime}分钟内<br/>最大等级</th>
+                        <th className={classMS}>{hacktime}分钟内<br/>最大里程碑</th>
                         <th/>
-                        <th>MS</th>
-                        <th>Time</th>
-                        <th>Bonus</th>
-                        <th>Change</th>
-                        <th>Next Level</th>
-                        <th className={classTarget}>Next Level<br/>After Target</th>
-                        <th className={classLevel}>Next Level<br/>After Max Level</th>
-                        <th className={classMS}>Next Level<br/>After Max MS</th>
+                        <th>里程碑</th>
+                        <th>时间</th>
+                        <th>加成</th>
+                        <th>变化</th>
+                        <th>下一等级</th>
+                        <th className={classTarget}>目标后<br/>下一等级</th>
+                        <th className={classLevel}>最大等级后<br/>下一等级</th>
+                        <th className={classMS}>最大里程碑后<br/>下一等级</th>
                     </tr>
                     {
                         Hacks.map((hack, pos) => {
@@ -336,7 +336,7 @@ class HackComponent extends Component {
                                                     ? 'level'
                                                     : 'goal',
                                                 pos)}>
-                                                {'Complete'}
+                                                {'完成'}
                                             </button>
                                     }
                                 </td>
@@ -349,7 +349,7 @@ class HackComponent extends Component {
                                                     value: target
                                                 }
                                             }, 'goal', pos)}>
-                                                {'Set Target'}
+                                                {'设置目标'}
                                             </button>
                                     }
                                 </td>
@@ -398,13 +398,13 @@ class HackComponent extends Component {
                                     }
                                 }, 'hacks');
                             }}>
-                                {'Complete All'}
+                                {'全部完成'}
                             </button>
                         </td>
                         <td className={classLevel}/>
                         <td className={classMS}/>
                         <td/>
-                        <th className={classTarget}>{'Min total:'}<br/>{'' + toTime((sumtime - hackhacktime) / hackhackchange + hackhacktime)}
+                        <th className={classTarget}>{'最短总计:'}<br/>{'' + toTime((sumtime - hackhacktime) / hackhackchange + hackhacktime)}
                         </th>
                     </tr>
                     <tr>
@@ -415,7 +415,7 @@ class HackComponent extends Component {
                         <td/>
                         <td/>
                         <td/>
-                        <th className={classTarget}>{'Max total:'}<br/>{'' + toTime(sumtime)}</th>
+                        <th className={classTarget}>{'最长总计:'}<br/>{'' + toTime(sumtime)}</th>
                     </tr>
                     </tbody>
                 </table>

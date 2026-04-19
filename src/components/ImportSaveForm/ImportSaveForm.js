@@ -285,9 +285,9 @@ const ImportSaveForm = (props) => {
             <input ref={inputElem} style={{display: "none"}} type='file' id='savefileloader'
                    onChange={e => handleFilePick(e)}/>
             <button onClick={() => inputElem.current.click()}
-                    data-tip={"Supported file types are<br/>(1) raw NGU save files, and<br/>(2) NGUSav.es JSON files."}
+                    data-tip={"支持的文件类型:<br/>(1) 原始 NGU 存档文件, 和<br/>(2) NGUSav.es JSON 文件."}
                     data-place="bottom"
-            >Import save from file
+            >从文件导入存档
             </button>
             <label>禁用未持有的物品<input type="checkbox" checked={disableItems} onChange={() => {
                 setDisableItems(!disableItems)

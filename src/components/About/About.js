@@ -101,7 +101,7 @@ class AboutComponent extends Component {
             <Modal className={'port-modal' + (this.context ? ' dark-mode' : '')} overlayClassName='port-overlay'
                    isOpen={this.state.open}
                    onAfterOpen={undefined} onRequestClose={() => (this.setState({open: false}))} style={customStyles}
-                   contentLabel='Import / Export' autoFocus={false}>
+                   contentLabel='导入/导出' autoFocus={false}>
                 <PortForm {...this.props} closePortModal={() => (this.setState({open: false}))}/>
             </Modal>
         </div>

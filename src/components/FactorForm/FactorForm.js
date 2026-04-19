@@ -52,7 +52,7 @@ export default class FactorForm extends React.Component {
                 </div>
                 <div className="factor-form-crement">
                     <Crement
-                        header='slots'
+                        header='槽位'
                         value={this.props.maxslots[this.props.idx]}
                         name={['maxslots', this.props.idx]}
                         handleClick={this.props.handleCrement}

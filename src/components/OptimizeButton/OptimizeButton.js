@@ -11,11 +11,11 @@ export default class OptimizeButton extends Component {
     render() {
         if (this.props.running) {
             return (<button onClick={() => this.props.abort()}>
-                Abort
+                中止
             </button>);
         } else {
             return (<button onClick={() => this.props.optimize()}>
-                {'Optimize ' + this.props.text}
+                {'优化' + this.props.text}
             </button>);
         }
     }

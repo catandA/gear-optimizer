@@ -15,7 +15,7 @@ export default class ExportForm extends React.Component {
             <table className='center'>
                 <tbody>
                 <tr>
-                    <td>{'Current loadout: '}
+                    <td>{'当前装备方案: '}
                     </td>
                     <td>
                         <label>
@@ -29,7 +29,7 @@ export default class ExportForm extends React.Component {
                 </tr>
                 <tr>
 
-                    <td>{'Saved loadout: '}
+                    <td>{'保存的装备方案: '}
                     </td>
                     <td>
 
@@ -47,7 +47,7 @@ export default class ExportForm extends React.Component {
                     <td></td>
 
                     <td>
-                        <button onClick={this.props.closeExportModal}>{'Close'}</button>
+                        <button onClick={this.props.closeExportModal}>{'关闭'}</button>
                     </td>
                 </tr>
                 </tbody>

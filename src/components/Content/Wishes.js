@@ -106,36 +106,36 @@ class WishComponent extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div>
                     {
-                        ['eE', 'mM', 'rR'].map(x => <div key={x}>
+                        [['eE', '能量'], ['mM', '魔力'], ['rR', '资源3']].map(x => <div key={x[0]}>
                             <label>
-                                {x[1] + ' power'}
+                                {x[1] + '强度'}
                                 <input style={{
                                     width: '11ch',
                                     margin: '1ch'
-                                }} type="number" step="any" value={this.props.wishstats[x[0] + 'pow']}
-                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0] + 'pow')}/>
+                                }} type="number" step="any" value={this.props.wishstats[x[0][0] + 'pow']}
+                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0][0] + 'pow')}/>
                             </label>
                             <label>
-                                {' cap'}
+                                {' 上限'}
                                 <input style={{
                                     width: '11ch',
                                     margin: '1ch'
-                                }} type="number" step="any" value={this.props.wishstats[x[0] + 'cap']}
-                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0] + 'cap')}/>
+                                }} type="number" step="any" value={this.props.wishstats[x[0][0] + 'cap']}
+                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0][0] + 'cap')}/>
                             </label>
                             <label>
-                                {' use (%)'}
+                                {' 使用 (%)'}
                                 <input style={{
                                     width: '11ch',
                                     margin: '1ch'
-                                }} type="number" step="any" value={this.props.wishstats[x[0] + 'pct']}
-                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0] + 'pct')}/>
+                                }} type="number" step="any" value={this.props.wishstats[x[0][0] + 'pct']}
+                                       onFocus={this.handleFocus} onChange={(e) => this.handleChange(e, x[0][0] + 'pct')}/>
                             </label>
                         </div>)
                     }
                 </div>
                 <label>
-                    {'Wish speed modifier:'}
+                    {'许愿速度修正:'}
                     <input style={{
                         width: '6.6ch',
                         margin: '1ch'
@@ -145,15 +145,15 @@ class WishComponent extends Component {
                 <br/>
                 <ModifierForm {...this.props} name={'wishstats'} e={true} m={true} r={true}/>
                 <label>
-                    {'Minimal wish time:'}
+                    {'最小许愿时间:'}
                     <input style={{
                         width: '6.6ch',
                         margin: '1ch'
                     }} type="number" step="any" value={this.props.wishstats.wishcap} onFocus={this.handleFocus}
-                           onChange={(e) => this.handleChange(e, 'wishcap')}/> {' minutes'}
+                           onChange={(e) => this.handleChange(e, 'wishcap')}/> {' 分钟'}
                 </label>
                 <br/>
-                <div>{'Equal resources'}
+                <div>{'均衡资源'}
                     <label>
                         <input type="checkbox" checked={this.props.wishstats.equalResources}
                                onChange={(e) => this.props.handleSettings('wishstats', {
@@ -163,7 +163,7 @@ class WishComponent extends Component {
                     </label>
                 </div>
                 {<ResourcePriorityForm {...this.props} handleChange={this.handleChange}/>}
-                <div><Crement header='Wish slots' value={this.props.wishstats.wishes.length} name='wishslots'
+                <div><Crement header='许愿槽位' value={this.props.wishstats.wishes.length} name='wishslots'
                               handleClick={this.props.handleCrement} min={1} max={100}/></div>
                 <br/> {
                 this.props.wishstats.wishes.map((wish, pos) => <div key={pos}>
@@ -175,7 +175,7 @@ class WishComponent extends Component {
                     }
                     <br/>
                     <label>
-                        {' Start level:'}<input style={{
+                        {' 起始等级:'}<input style={{
                         width: '4.4ch',
                         margin: '1ch'
                     }} type="number" step="any" value={this.props.wishstats.wishes[pos].start}
@@ -183,7 +183,7 @@ class WishComponent extends Component {
                                                 onChange={(e) => this.handleChange(e, 'start', pos)}/>
                     </label>
                     <label>
-                        {' Target level:'}<input style={{
+                        {' 目标等级:'}<input style={{
                         width: '4.4ch',
                         margin: '1ch'
                     }} type="number" step="any" value={this.props.wishstats.wishes[pos].goal} onFocus={this.handleFocus}
@@ -197,7 +197,7 @@ class WishComponent extends Component {
             }}>
                 <tbody>{
                     assignments.map((a, idx) => <tr key={idx}>
-                        <td>{'Wish ' + this.props.wishstats.wishes[idx].wishidx + ' requires: '}</td>
+                        <td>{'许愿 ' + this.props.wishstats.wishes[idx].wishidx + ' 需要: '}</td>
                         {
                             a.map((val, jdx) => <td key={jdx} style={{
                                 display: 'inline-block'
@@ -210,16 +210,16 @@ class WishComponent extends Component {
                                 <div key={jdx + 'div'} style={{
                                     paddingRight: '1ch',
                                     display: 'inline-block'
-                                }}>{['E', 'M', 'R'][jdx]}</div>
+                                }}>{['能量', '魔力', '资源3'][jdx]}</div>
                             </td>)
                         }
                         <td>{toTime(scores[idx])}</td>
                     </tr>)
                 }</tbody>
             </table>
-            <br/> {'After ' + score + ' all targets will be reached.'}
+            <br/> {score + '后所有目标都将达成'}
             <br/>
-            <br/> {'Spare resources: '}
+            <br/> {'剩余资源: '}
             {
                 remaining.map((val, jdx) => <div key={jdx} style={{
                     display: 'inline-block'
@@ -232,12 +232,12 @@ class WishComponent extends Component {
                     <div key={jdx + 'div'} style={{
                         paddingRight: '1ch',
                         display: 'inline-block'
-                    }}>{['E', 'M', 'R'][jdx]}</div>
+                    }}>{['能量', '魔力', '资源3'][jdx]}</div>
                 </div>)
             }
             <br/>
             <br/>
-            <div>{'Wish time estimation'}
+            <div>{'许愿时间估算'}
                 <label>
                     <input type="checkbox" checked={this.props.wishstats.trueTime}
                            onChange={(e) => this.props.handleSettings('wishstats', {
@@ -253,17 +253,17 @@ class WishComponent extends Component {
                     }}>
                         <tbody>
                         <tr>
-                            <th>{'Wish'}</th>
-                            <th>{'in theory'}</th>
-                            <th>{'in practice'}</th>
-                            <th>{'stops at'}</th>
+                            <th>{'许愿'}</th>
+                            <th>{'理论值'}</th>
+                            <th>{'实际值'}</th>
+                            <th>{'停止于'}</th>
                         </tr>
                         {
                             this.props.wishstats.wishes.map((wish, pos) => <tr key={pos}>
                                 <td>{wish.wishidx + ' (' + wish.start + ' → ' + wish.goal + ')'}</td>
                                 <td>{toTime(scores[pos])}</td>
                                 <td>{toTime(trueScores[pos][1])}</td>
-                                <td>{"level " + trueScores[pos][2]}</td>
+                                <td>{"等级 " + trueScores[pos][2]}</td>
                             </tr>)
                         }</tbody>
                     </table>

@@ -25,7 +25,7 @@ export default class VersionForm extends React.Component {
             /* eslint-disable-next-line react/no-direct-mutation-state */
             this.state.value = this.props.augstats.version;
         }
-        const version_names = ['normal', 'evil', 'sadistic'];
+        const version_names = ['普通', '邪恶', '残虐'];
         return (<label>
             <select value={this.state.value} onChange={this.handleChange}>
                 {version_names.map((name, idx) => (<option value={idx} key={idx}>{name}</option>))}

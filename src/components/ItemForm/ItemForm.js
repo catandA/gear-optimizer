@@ -13,8 +13,8 @@ class LockButton extends React.Component {
         const locked = getLock(slot[0], idx, this.props.locked);
         return <button onClick={() => this.props.handleLockItem(!locked, slot[0], idx)}>{
             locked
-                ? 'Unlock'
-                : 'Lock'
+                ? '解锁'
+                : '锁定'
         }</button>
     }
 }
@@ -58,9 +58,9 @@ export default class ItemForm extends React.Component {
 
     render() {
         const item = this.props.itemdata[this.props.editItem[1]];
-        let able = 'Disable';
+        let able = '禁用';
         if (item !== undefined && item.disable) {
-            able = 'Enable'
+            able = '启用'
         }
         let header = '';
         if (item !== undefined) {
@@ -69,7 +69,7 @@ export default class ItemForm extends React.Component {
         return (<form onSubmit={this.handleSubmit}>
             {header}<br/>
             <label>
-                {'Level:'}
+                {'等级:'}
                 <input style={{
                     width: '50px',
                     margin: '10px'
@@ -77,12 +77,12 @@ export default class ItemForm extends React.Component {
                        onFocus={this.handleFocus}/>
             </label>
             <br/>
-            <input type='submit' value='Update'/>{' '}
+            <input type='submit' value='更新'/>{' '}
             <button onClick={() => this.props.handleDisableItem(this.props.editItem[1])}>{able}</button>
             {' '}
             <LockButton {...this.props}/>
             <br/>
-            <button onClick={this.props.closeEditModal}>{'Cancel'}</button>
+            <button onClick={this.props.closeEditModal}>{'取消'}</button>
         </form>);
     }
 }

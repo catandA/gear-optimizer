@@ -52,7 +52,7 @@ export default class PortForm extends React.Component {
         }
         return (<form onSubmit={this.handleSubmit}>
             <label>
-                {'Local storage: '}
+                {'本地存储: '}
                 <input style={{
                     width: '120px',
                     margin: '10px'
@@ -60,11 +60,11 @@ export default class PortForm extends React.Component {
                        autoFocus={true} onFocus={this.handleFocus}/>
             </label>
             <br/>
-            <button onClick={(e) => this.handleChange(e)}>{'Import'}</button>
+            <button onClick={(e) => this.handleChange(e)}>{'导入'}</button>
             {'  '}
-            <button onClick={(e) => this.handleChange(e, null)}>{'Clear local storage'}</button>
+            <button onClick={(e) => this.handleChange(e, null)}>{'清除本地存储'}</button>
             {'  '}
-            <button onClick={this.props.closePortModal}>{'Cancel'}</button>
+            <button onClick={this.props.closePortModal}>{'取消'}</button>
         </form>);
     }
 }

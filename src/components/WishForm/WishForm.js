@@ -28,7 +28,7 @@ export default class WishForm extends React.Component {
             this.state.value = this.props.wishidx;
         }
         return (<label key={this.props.idx}>
-            {'Wish '}
+            {'许愿 '}
             <select value={this.state.value} onChange={this.handleChange}>
                 {Wishes.map((wish, idx) => (<option value={idx} key={idx}>{idx + ': ' + Wishes[idx][0]}</option>))}
             </select>

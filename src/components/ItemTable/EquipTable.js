@@ -167,8 +167,8 @@ export default class EquipTable extends React.Component {
                 typeIdx = idx;
                 if (item.slot[0] === Slot.ACCESSORY[0]) {
                     buffer.push(<div className='item-section' key={this.class_idx++}>
-                        <span>{prefix + 'Outfit'}<br/></span>{localbuffer}
-                    </div>);
+                    <span>{prefix + '装备'}<br/></span>{localbuffer}
+                </div>);
                     localbuffer = [];
                 }
             }
@@ -181,7 +181,7 @@ export default class EquipTable extends React.Component {
             last = item;
         }
         buffer.push(<div className='item-section' key={this.class_idx++}>
-            <span>{prefix + 'Accessories'}<br/></span>{localbuffer}
+            <span>{prefix + '饰品'}<br/></span>{localbuffer}
         </div>);
     }
 
@@ -221,10 +221,10 @@ export default class EquipTable extends React.Component {
         buffer.push(<SaveButtons {...this.props} loadoutURI={equip2url(equip, this.itemdata)}
                                  saveURI={equip2url(savedequip, this.itemdata)} key='savebuttons'/>)
         if (this.props.showsaved) {
-            this.render_equip(savedequip, 'Saved ', compare, buffer, this.props.handleEquipItem, this.props.handleCtrlClickItem, false);
+            this.render_equip(savedequip, '已保存', compare, buffer, this.props.handleEquipItem, this.props.handleCtrlClickItem, false);
         }
         buffer.push(<div className='item-section' key='stats'
-                         onClick={() => this.props.handleSettings('compactbonus', !this.props.compactbonus)}>{'装备加成(change w.r.t. save slot)'}<br/><br/> {
+                         onClick={() => this.props.handleSettings('compactbonus', !this.props.compactbonus)}>{'装备加成(相对于存档槽位的变化)'}<br/><br/> {
             Object.getOwnPropertyNames(Factors).map((factor) => (
                 (factor === 'NONE' || factor === 'DELETE' || factor === 'INSERT')
                     ? <div key={factor}/>
@@ -234,8 +234,8 @@ export default class EquipTable extends React.Component {
                                  offhand={this.props.offhand * 5} key={factor}/>))
         }
         </div>);
-        this.render_conditional(id => this.itemdata[id].level !== 100, 'Not maxed', buffer, this.props.handleCtrlClickItem, (itemId) => this.props.handleEditItem(itemId, -1));
-        this.render_conditional(id => this.itemdata[id].disable, 'Disabled', buffer, this.props.handleCtrlClickItem, (itemId) => this.props.handleEditItem(itemId, -1));
+        this.render_conditional(id => this.itemdata[id].level !== 100, '未满级', buffer, this.props.handleCtrlClickItem, (itemId) => this.props.handleEditItem(itemId, -1));
+        this.render_conditional(id => this.itemdata[id].disable, '已禁用', buffer, this.props.handleCtrlClickItem, (itemId) => this.props.handleEditItem(itemId, -1));
         return (<div className='item-table'>
             {buffer}
         </div>);

@@ -51,7 +51,7 @@ class Item extends Component {
             classNames += ' lock-item'
         }
         if (item === undefined) {
-            return (<span><img className={classNames} data-tip='Empty slot' src={images.logo} alt='Empty'/>
+            return (<span><img className={classNames} data-tip='空槽位' src={images.logo} alt='空'/>
                         </span>);
         }
         let tt = '(' + item.id + ') ' + item.name + (

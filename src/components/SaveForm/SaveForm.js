@@ -44,7 +44,7 @@ export default class SaveForm extends React.Component {
                 {
                     this.props.savedequip.map((save, idx) => {
                         let tmpname = save.name === undefined
-                            ? 'Slot with no name'
+                            ? '未命名槽位'
                             : save.name;
                         return (<option value={idx} key={idx}>{idx + ': ' + tmpname}</option>);
                     })
