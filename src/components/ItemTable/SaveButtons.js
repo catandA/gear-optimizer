@@ -50,7 +50,7 @@ class SaveButtons extends Component {
             this.state.value = this.props.savedequip[this.props.savedidx].ignore;
         }
         const name = this.props.savedequip[this.props.savedidx].name === undefined
-            ? '未命名槽位'
+            ? '新建槽位'
             : this.props.savedequip[this.props.savedidx].name;
         return (<div className='item-section'>
             <div style={{

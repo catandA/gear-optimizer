@@ -11,6 +11,7 @@ import NGUComponent from '../Content/NGUs';
 import HackComponent from '../Content/Hacks';
 import WishComponent from '../Content/Wishes';
 import AboutComponent from '../About/About';
+import NGUIntegrationPanel from '../NGUIntegration/NGUIntegrationPanel';
 
 import DarkModeContext from './DarkModeContext';
 
@@ -231,6 +232,10 @@ const AppLayout = props => {
                                 <li className='nav-bar-item'>
                                     <NavLink to='/about/' exact={true} className='nav-link'
                                              activeClassName='active'>关于</NavLink>
+                                </li>
+                                <div className="nav-bar-item-separator"></div>
+                                <li className='nav-bar-item'>
+                                    <NGUIntegrationPanel {...props} />
                                 </li>
                             </ul>
                         </nav>

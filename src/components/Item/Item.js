@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {getLock} from '../../util'
 import {useDrag, useDrop} from 'react-dnd';
+import {getItemNameCN} from '../../lib/itemNamesCN';
 
 import './Item.css';
 
@@ -54,7 +55,8 @@ class Item extends Component {
             return (<span><img className={classNames} data-tip='空槽位' src={images.logo} alt='空'/>
                         </span>);
         }
-        let tt = '(' + item.id + ') ' + item.name + (
+        let displayName = getItemNameCN(item.name);
+        let tt = '(' + item.id + ') ' + displayName + (
             item.empty
                 ? ''
                 : ' lvl ' + item.level) + '<br />';
@@ -77,6 +79,17 @@ class Item extends Component {
             imgname = item.name;
             imgname = imgname.replace(/</g, '');
             imgname = imgname.replace(/!/g, '');
+        }
+        if (images[imgname] === undefined && item.empty) {
+            var slotNames = {
+                'weapon': 'Empty Weapon Slot',
+                'head': 'Empty Head Slot',
+                'armor': 'Empty Armor Slot',
+                'pants': 'Empty Pants Slot',
+                'boots': 'Empty Boots Slot',
+                'accessory': 'Empty Accessory Slot'
+            };
+            imgname = slotNames[item.slot[0]] || 'Empty Accessory Slot';
         }
         return (<img className={classNames}
                      onClick={(e) => {
