@@ -147,13 +147,9 @@ class Optimizer extends Component {
                             </div>
                             <div><Crement header='饰品槽位' value={accslots} name='accslots'
                                           handleClick={this.props.handleCrement} min={0} max={100}/></div>
-                            {
-                                this.props.zone > 27
-                                    ? <div><Crement header='副手强度' value={this.props.offhand * 5 + '%'}
+                            <div><Crement header='副手强度' value={this.props.offhand * 5 + '%'}
                                                     name='offhand'
                                                     handleClick={this.props.handleCrement} min={0} max={20}/></div>
-                                    : ''
-                            }
                         </div>
                         <div className='button-section' key='factorforms'>
                             <OptimizeButton text={'装备'} running={this.props.running}
